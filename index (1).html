@@ -1,4 +1,47 @@
-{
-  "cat_index": 0,
-  "used_titles": {}
-}
+name: 自動生成部落格文章
+
+on:
+  schedule:
+    # 每兩天台灣時間 09:00 執行（UTC 01:00）
+    - cron: '0 1 */2 * *'
+  workflow_dispatch:
+    # 允許手動觸發（測試用）
+    inputs:
+      category:
+        description: '指定分類（留空自動輪替）'
+        required: false
+        default: ''
+
+jobs:
+  generate-article:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 取出程式碼
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安裝套件
+        run: pip install anthropic
+
+      - name: 生成文章
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MANUAL_CATEGORY: ${{ github.event.inputs.category }}
+        run: python scripts/generate_article.py
+
+      - name: 提交新文章
+        run: |
+          git config --global user.name "寶璣建設 Bot"
+          git config --global user.email "bot@bqfox.com"
+          git add blog/articles/*.html scripts/counter.json
+          git diff --staged --quiet || git commit -m "✍️ 自動新增部落格文章 $(date '+%Y-%m-%d')"
+          git push
