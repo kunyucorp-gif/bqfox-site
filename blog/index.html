@@ -310,19 +310,33 @@ footer{background:#111;padding:3rem 0 2rem}
 <body>
 
 <!-- ══ NAV ══ -->
-<nav class="nav" role="navigation" aria-label="主要導覽">
+<nav class="nav" id="nav" role="navigation" aria-label="主要導覽">
   <a href="../index.html" class="nav-logo" aria-label="寶璣建設有限公司 首頁">
-    <div class="nav-logo-mark" aria-hidden="true"><span>璣</span></div>
+    <div class="nav-logo-mark" style="width:44px;height:44px;background:none;padding:0;border:none">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 244" width="44" height="44" aria-hidden="true"><circle cx="122" cy="122" r="122" fill="#8a6e24"/><circle cx="122" cy="122" r="118" fill="#b8923a"/><circle cx="122" cy="122" r="114" fill="#c9a040"/><circle cx="122" cy="122" r="110" fill="#d4aa52"/><circle cx="122" cy="122" r="104" fill="#1a1410"/><circle cx="122" cy="122" r="104" fill="none" stroke="#b8923a" stroke-width="0.3" stroke-dasharray="1 3.8" opacity="0.18"/><circle cx="122" cy="122" r="94" fill="none" stroke="#b8923a" stroke-width="0.3" opacity="0.12"/><rect x="99" y="89" width="52" height="82" fill="#b8923a" opacity="0.1" transform="translate(3,3)"/><rect x="96" y="86" width="52" height="82" fill="#b8923a"/><rect x="104" y="74" width="36" height="14" fill="#b8923a"/><rect x="112" y="62" width="20" height="14" fill="#b8923a"/><polygon points="122,46 118,62 126,62" fill="#d4aa52"/><circle cx="122" cy="46" r="3.5" fill="#d4aa52"/><rect x="102" y="94" width="9" height="8" fill="#1a1410"/><rect x="116" y="94" width="9" height="8" fill="#1a1410"/><rect x="130" y="94" width="9" height="8" fill="#1a1410"/><rect x="102" y="107" width="9" height="8" fill="#1a1410"/><rect x="116" y="107" width="9" height="8" fill="#1a1410"/><rect x="130" y="107" width="9" height="8" fill="#1a1410"/><rect x="102" y="120" width="9" height="8" fill="#1a1410"/><rect x="116" y="120" width="9" height="8" fill="#1a1410"/><rect x="130" y="120" width="9" height="8" fill="#1a1410"/><rect x="116" y="133" width="9" height="8" fill="#1a1410"/><rect x="115" y="156" width="14" height="12" rx="1" fill="#1a1410" opacity="0.8"/><rect x="82" y="168" width="80" height="6" fill="#b8923a"/><rect x="72" y="174" width="100" height="4" fill="#b8923a" opacity="0.55"/></svg>
+    </div>
     <div class="nav-logo-text">
       <strong>寶璣建設有限公司</strong>
-      <small>BAO CHI CONSTRUCTION CO., LTD.</small>
+      <small>BAU QI CONSTRUCTION CO, LTD</small>
     </div>
   </a>
   <ul class="nav-menu" role="list">
-    <li><a href="../index.html#about" class="nav-link">關於我們</a></li>
-    <li><a href="../index.html#services" class="nav-link">營業項目</a></li>
-    <li><a href="index.html" class="nav-link active">知識專欄</a></li>
-    <li><a href="../index.html#contact" class="nav-link">聯絡我們</a></li>
+    <li class="nav-item"><a href="../index.html#about" class="nav-link">關於我們</a></li>
+    <li class="nav-item">
+      <a href="../index.html#services" class="nav-link">營業項目 ▾</a>
+      <div class="nav-dd" role="menu">
+        <a href="../pages/floor-area-ratio.html" role="menuitem">容積移轉代辦</a>
+        <a href="../pages/road-land.html" role="menuitem">道路用地買賣</a>
+        <a href="../pages/rezoning-land.html" role="menuitem">重劃地買賣</a>
+        <a href="../pages/tenancy-375.html" role="menuitem">三七五租約解約</a>
+        <a href="../pages/co-ownership.html" role="menuitem">持份土地買賣、租賃</a>
+        <a href="../pages/joint-ownership.html" role="menuitem">公同共有處理</a>
+        <a href="../pages/ancestral-land.html" role="menuitem">祭祀公業</a>
+        <a href="../pages/cross-strait-inheritance.html" role="menuitem">兩岸三地繼承</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="index.html" class="nav-link active">知識專欄</a></li>
+    <li class="nav-item"><a href="../index.html#contact" class="nav-link">聯絡我們</a></li>
   </ul>
   <div class="nav-actions">
     <a href="tel:0222746789" class="nav-tel" aria-label="撥打電話">☎ 02-2274-6789</a>
@@ -331,7 +345,28 @@ footer{background:#111;padding:3rem 0 2rem}
       LINE 諮詢
     </a>
   </div>
+  <button class="hamburger" id="hbtn" aria-label="開啟選單" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="行動選單">
+  <button class="mob-close" id="mobClose" aria-label="關閉選單">✕</button>
+  <a href="../index.html#about">關於我們</a>
+  <span class="mob-cat">營業項目</span>
+  <a href="../pages/floor-area-ratio.html" class="mob-sub">└ 容積移轉代辦</a>
+  <a href="../pages/road-land.html" class="mob-sub">└ 道路用地買賣</a>
+  <a href="../pages/rezoning-land.html" class="mob-sub">└ 重劃地買賣</a>
+  <a href="../pages/tenancy-375.html" class="mob-sub">└ 三七五租約解約</a>
+  <a href="../pages/co-ownership.html" class="mob-sub">└ 持份土地買賣、租賃</a>
+  <a href="../pages/joint-ownership.html" class="mob-sub">└ 公同共有處理</a>
+  <a href="../pages/ancestral-land.html" class="mob-sub">└ 祭祀公業</a>
+  <a href="../pages/cross-strait-inheritance.html" class="mob-sub">└ 兩岸三地繼承</a>
+  <a href="index.html">知識專欄</a>
+  <a href="../index.html#contact">聯絡我們</a>
+  <a href="tel:0222746789">☎ 02-2274-6789</a>
+  <a href="https://lin.ee/wedzic3" target="_blank" rel="noopener">加入官方LINE @484jhubi</a>
+</div>
 
 <!-- ══ HERO ══ -->
 <section class="blog-hero">
@@ -846,5 +881,6 @@ function filterCat(btn,cat){
   });
 }
 </script>
+<script src="../assets/main.js"></script>
 </body>
 </html>
