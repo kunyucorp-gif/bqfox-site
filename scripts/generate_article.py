@@ -798,6 +798,126 @@ def wrap_article(cat, title, body, article_id):
 </html>"""
 
 
+def rebuild_blog_index():
+    """掃描所有文章，重新產生 blog/index.html"""
+    import re as _re
+    from pathlib import Path as _Path
+
+    articles_dir = BASE_DIR / "blog" / "articles"
+    blog_index = BASE_DIR / "blog" / "index.html"
+
+    CAT_ICON = {
+        "道路用地買賣":"🛣️","容積移轉代辦":"📐","重劃地買賣":"🗺️",
+        "三七五租約解約":"🌾","持份土地買賣":"🤝","公同共有處理":"⚖️",
+        "祭祀公業土地":"🏮","兩岸三地繼承":"🌏",
+        "道路用地":"🛣️","容積移轉":"📐","持分土地":"🤝","祭祀公業":"🏮",
+        "三七五租約":"🌾","公同共有":"⚖️","未辦繼承":"📜","農地":"🌱","重劃地":"🗺️",
+    }
+
+    # 掃描所有文章，提取 title / category / date
+    articles = []
+    for f in sorted(articles_dir.glob("*.html"), reverse=True):
+        html = f.read_text(encoding="utf-8")
+        title_m = _re.search(r"<title>([^<]+)｜", html)
+        cat_m   = _re.search(r'art-cat-badge[^>]*>[^<]*?([\u4e00-\u9fff]+(?:[\u4e00-\u9fff\s]+)?)</span>', html)
+        date_m  = _re.search(r'<span[^>]*>(\d{4}-\d{2}-\d{2})</span>', html)
+        if not title_m:
+            continue
+        title = title_m.group(1).strip()
+        cat   = cat_m.group(1).strip() if cat_m else "土地知識"
+        # clean icon from cat
+        cat = _re.sub(r"[^\u4e00-\u9fff\w]", "", cat).strip()
+        date  = date_m.group(1) if date_m else ""
+        icon  = CAT_ICON.get(cat, "📄")
+        articles.append({
+            "id":    f.stem,
+            "file":  f.name,
+            "title": title,
+            "cat":   cat,
+            "icon":  icon,
+            "date":  date,
+        })
+
+    total = len(articles)
+    print(f"📚 找到 {total} 篇文章，重新產生 blog/index.html...")
+
+    # Build category sections
+    from collections import defaultdict
+    cat_map = defaultdict(list)
+    for a in articles:
+        cat_map[a["cat"]].append(a)
+
+    # Category order
+    CAT_ORDER = ["道路用地買賣","道路用地","容積移轉代辦","容積移轉",
+                 "持份土地買賣","持分土地","祭祀公業土地","祭祀公業",
+                 "三七五租約解約","三七五租約","公同共有處理","公同共有",
+                 "未辦繼承","農地","重劃地買賣","重劃地","兩岸三地繼承"]
+    ordered_cats = []
+    seen = set()
+    for c in CAT_ORDER:
+        if c in cat_map and c not in seen:
+            ordered_cats.append(c)
+            seen.add(c)
+    for c in cat_map:
+        if c not in seen:
+            ordered_cats.append(c)
+
+    # Build article cards HTML
+    def make_card(a, featured=False):
+        if featured:
+            return f"""      <a href="articles/{a['file']}" class="art-card featured">
+        <div class="art-card-icon">{a['icon']}</div>
+        <div class="art-card-body">
+          <div class="art-card-cat">{a['cat']}</div>
+          <h3>{a['title']}</h3>
+          <div class="art-card-footer"><span class="art-card-link">閱讀全文</span></div>
+        </div>
+      </a>"""
+        return f"""      <a href="articles/{a['file']}" class="art-card">
+        <div class="art-card-cat">{a['icon']} {a['cat']}</div>
+        <h3>{a['title']}</h3>
+        <div class="art-card-footer">
+          {"<span style=\"font-size:.72rem;color:var(--stone-light);\">" + a['date'] + "</span>" if a['date'] else ""}
+          <span class="art-card-link">閱讀</span>
+        </div>
+      </a>"""
+
+    sections_html = ""
+    for cat in ordered_cats:
+        arts = cat_map[cat]
+        icon = CAT_ICON.get(cat, "📄")
+        cards = ""
+        for i, a in enumerate(arts):
+            cards += make_card(a, featured=(i == 0 and len(arts) >= 3)) + "\n"
+        sections_html += f"""
+  <div class="cat-section" data-cat="{cat}">
+    <div class="section-header">
+      <h2 class="section-title"><span>{icon}</span>{cat}</h2>
+      <span class="section-count">{len(arts)} 篇</span>
+    </div>
+    <div class="art-grid">
+{cards}    </div>
+  </div>
+"""
+
+    # Read current index for CSS/nav/footer (keep structure, replace main content)
+    if blog_index.exists():
+        current = blog_index.read_text(encoding="utf-8")
+        # Replace stats number
+        current = _re.sub(r'(<div class="stat-n">)\d+(</div>\s*<div class="stat-l">深度文章)',
+                          r'\g<1>' + str(total) + r'\2', current)
+        # Replace main content between <main> and </main>
+        new_main = f"""<main class="blog-main" id="blog-main">
+{sections_html}
+</main>"""
+        current = _re.sub(r'<main class="blog-main"[^>]*>.*?</main>',
+                          new_main, current, flags=_re.DOTALL)
+        blog_index.write_text(current, encoding="utf-8")
+        print(f"✅ blog/index.html 已更新（{total} 篇文章，{len(ordered_cats)} 個分類）")
+    else:
+        print("⚠️ blog/index.html 不存在，略過更新")
+
+
 def main():
     # 載入計數器
     counter = load_counter()
@@ -841,6 +961,9 @@ def main():
     counter["cat_index"] = (cat_idx + 1) % len(CATEGORIES)
     save_counter(counter)
     print(f"🔄 下次分類：{CATEGORIES[counter['cat_index']]['name']}")
+
+    # 重新產生部落格列表頁
+    rebuild_blog_index()
 
 
 if __name__ == "__main__":
