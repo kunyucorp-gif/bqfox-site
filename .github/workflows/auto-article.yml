@@ -40,6 +40,6 @@ jobs:
         run: |
           git config --global user.name "寶璣建設 Bot"
           git config --global user.email "bot@bqfox.com"
-          git add blog/articles/*.html scripts/counter.json
+          git add blog/articles/*.html blog/index.html scripts/counter.json
           git diff --staged --quiet || git commit -m "✍️ 自動新增部落格文章 $(date '+%Y-%m-%d')"
           git push
