@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /.github/
+Disallow: /scripts/
+
+Sitemap: https://www.bqfox.com/sitemap.xml
