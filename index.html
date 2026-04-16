@@ -440,23 +440,27 @@
       </div>
       <div class="c-form rv d1">
         <h3>傳送訊息給我們</h3>
-        <div class="fg-row">
-          <div class="fg"><label for="fname">姓名 *</label><input type="text" id="fname" name="name" placeholder="您的姓名" required autocomplete="name"></div>
-          <div class="fg"><label for="fphone">聯絡電話 *</label><input type="tel" id="fphone" name="phone" placeholder="0912-345-678" required autocomplete="tel"></div>
-        </div>
-        <div class="fg"><label for="femail">電子郵件</label><input type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email"></div>
-        <div class="fg">
-          <label for="fservice">諮詢項目</label>
-          <select id="fservice" name="service">
-            <option value="">請選擇服務項目</option>
-            <option>容積移轉代辦</option><option>道路用地買賣</option>
-            <option>重劃地買賣</option><option>三七五租約解約</option>
-            <option>持份土地買賣、租賃</option><option>公同共有處理</option>
-            <option>祭祀公業</option><option>兩岸三地繼承</option><option>其他問題</option>
-          </select>
-        </div>
-        <div class="fg"><label for="fmsg">問題描述</label><textarea id="fmsg" name="message" placeholder="請簡述您的土地狀況或問題，我們將盡快回覆。"></textarea></div>
-        <button class="btn-submit" id="formSubmit" type="button"><span>送出諮詢</span></button>
+        <form action="https://formspree.io/f/myklkqrv" method="POST">
+          <input type="hidden" name="_subject" value="【寶璣建設】新諮詢表單">
+          <input type="hidden" name="_language" value="zh">
+          <div class="fg-row">
+            <div class="fg"><label for="fname">姓名 *</label><input type="text" id="fname" name="姓名" placeholder="您的姓名" required autocomplete="name"></div>
+            <div class="fg"><label for="fphone">聯絡電話 *</label><input type="tel" id="fphone" name="聯絡電話" placeholder="0912-345-678" required autocomplete="tel"></div>
+          </div>
+          <div class="fg"><label for="femail">電子郵件</label><input type="email" id="femail" name="電子郵件" placeholder="your@email.com" autocomplete="email"></div>
+          <div class="fg">
+            <label for="fservice">諮詢項目</label>
+            <select id="fservice" name="諮詢項目">
+              <option value="">請選擇服務項目</option>
+              <option>容積移轉代辦</option><option>道路用地買賣</option>
+              <option>重劃地買賣</option><option>三七五租約解約</option>
+              <option>持份土地買賣、租賃</option><option>公同共有處理</option>
+              <option>祭祀公業</option><option>兩岸三地繼承</option><option>其他問題</option>
+            </select>
+          </div>
+          <div class="fg"><label for="fmsg">問題描述</label><textarea id="fmsg" name="問題描述" placeholder="請簡述您的土地狀況或問題，我們將盡快回覆。"></textarea></div>
+          <button class="btn-submit" type="submit"><span>送出諮詢</span></button>
+        </form>
       </div>
     </div>
   </div>
