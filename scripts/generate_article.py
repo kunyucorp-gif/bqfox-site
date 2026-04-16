@@ -873,11 +873,12 @@ def rebuild_blog_index():
           <div class="art-card-footer"><span class="art-card-link">閱讀全文</span></div>
         </div>
       </a>"""
+        date_span = f'<span style="font-size:.72rem;color:var(--stone-light);">{a["date"]}</span>' if a['date'] else ''
         return f"""      <a href="articles/{a['file']}" class="art-card">
         <div class="art-card-cat">{a['icon']} {a['cat']}</div>
         <h3>{a['title']}</h3>
         <div class="art-card-footer">
-          {"<span style=\"font-size:.72rem;color:var(--stone-light);\">" + a['date'] + "</span>" if a['date'] else ""}
+          {date_span}
           <span class="art-card-link">閱讀</span>
         </div>
       </a>"""
