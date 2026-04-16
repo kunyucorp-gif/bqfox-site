@@ -1,4 +1,4 @@
-html{font-size:118%}
+html{font-size:113%}
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
 /* ══════════════════════════════════════════════
@@ -290,6 +290,7 @@ input,textarea,select { font:inherit }
   background:linear-gradient(90deg, transparent, var(--gold-rule), transparent);
 }
 .hmc-pills { display:flex; flex-wrap:wrap; gap:.4rem }
+a.hmc-pill { text-decoration:none }
 .hmc-pill {
   padding:.25rem .7rem;
   border:1px solid rgba(184,146,58,.2);
