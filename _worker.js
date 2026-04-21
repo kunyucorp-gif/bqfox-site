@@ -3,8 +3,9 @@
  *
  * 職責：
  *   1. 攔截 GoDaddy 時代的舊 URL（/三七五租約解約、/f/xxx 等）
- *   2. 301 轉址到現有新站的對應頁面（/pages/xxx.html）
- *   3. 其他請求交還給 Cloudflare 的靜態資產系統
+ *   2. 攔截根目錄舊命名 HTML 檔（/375-04.html、/an-01.html 等，Phase 1 dedup）
+ *   3. 301 轉址到現有新站的對應頁面（/pages/xxx.html、/blog/articles/）
+ *   4. 其他請求交還給 Cloudflare 的靜態資產系統
  *
  * 部署：放在 bqfox-site repo 根目錄（與 index.html 同層），推上 GitHub
  *      Cloudflare 會自動偵測 _worker.js 並啟用 JavaScript 邏輯
@@ -37,6 +38,72 @@ const EXACT_REDIRECTS = {
   '/關於我們': '/index.html#about',
   '/我們的陣容-1': '/index.html#about',
   '/首頁': '/',
+};
+
+// ============================================
+// Phase 1: 根目錄重複 HTML → blog/articles/ 或 pages/
+// （已同時用 meta-refresh 做 HTML fallback；此處為 server-side 301）
+// ============================================
+const LEGACY_FILE_REDIRECTS = {
+  '/co-13.html': '/blog/articles/co-13.html',
+  '/rl-13.html': '/blog/articles/rl-13.html',
+  '/375-08.html': '/blog/articles/375-08.html',
+  '/farm-03.html': '/blog/articles/farm-03.html',
+  '/rl-15.html': '/blog/articles/rl-15.html',
+  '/co-16.html': '/blog/articles/co-16.html',
+  '/re-01.html': '/blog/articles/re-01.html',
+  '/farm-01.html': '/blog/articles/farm-01.html',
+  '/co-07.html': '/blog/articles/co-07.html',
+  '/jo-03.html': '/blog/articles/jo-03.html',
+  '/jo-04.html': '/blog/articles/jo-04.html',
+  '/co-15.html': '/blog/articles/co-15.html',
+  '/co-09.html': '/blog/articles/co-09.html',
+  '/far-02.html': '/blog/articles/far-02.html',
+  '/375-10.html': '/blog/articles/375-10.html',
+  '/co-06.html': '/blog/articles/co-06.html',
+  '/an-06.html': '/blog/articles/an-06.html',
+  '/375-06.html': '/blog/articles/375-06.html',
+  '/jo-05.html': '/blog/articles/jo-05.html',
+  '/far-05.html': '/blog/articles/far-05.html',
+  '/375-09.html': '/blog/articles/375-09.html',
+  '/rl-11.html': '/blog/articles/rl-11.html',
+  '/rl-14.html': '/blog/articles/rl-14.html',
+  '/an-02.html': '/blog/articles/an-02.html',
+  '/co-17.html': '/blog/articles/co-17.html',
+  '/an-10.html': '/blog/articles/an-10.html',
+  '/co-11.html': '/blog/articles/co-11.html',
+  '/an-03.html': '/blog/articles/an-03.html',
+  '/co-12.html': '/blog/articles/co-12.html',
+  '/an-04.html': '/blog/articles/an-04.html',
+  '/an-05.html': '/blog/articles/an-05.html',
+  '/375-04.html': '/blog/articles/375-04.html',
+  '/re-03.html': '/blog/articles/re-03.html',
+  '/inh-01.html': '/blog/articles/inh-01.html',
+  '/inh-03.html': '/blog/articles/inh-03.html',
+  '/jo-01.html': '/blog/articles/jo-01.html',
+  '/co-14.html': '/blog/articles/co-14.html',
+  '/an-09.html': '/blog/articles/an-09.html',
+  '/far-01.html': '/blog/articles/far-01.html',
+  '/re-02.html': '/blog/articles/re-02.html',
+  '/inh-04.html': '/blog/articles/inh-04.html',
+  '/375-07.html': '/blog/articles/375-07.html',
+  '/farm-02.html': '/blog/articles/farm-02.html',
+  '/an-08.html': '/blog/articles/an-08.html',
+  '/rl-09.html': '/blog/articles/rl-09.html',
+  '/inh-05.html': '/blog/articles/inh-05.html',
+  '/rl-10.html': '/blog/articles/rl-10.html',
+  '/co-08.html': '/blog/articles/co-08.html',
+  '/co-10.html': '/blog/articles/co-10.html',
+  '/farm-04.html': '/blog/articles/farm-04.html',
+  '/jo-02.html': '/blog/articles/jo-02.html',
+  '/inh-06.html': '/blog/articles/inh-06.html',
+  '/farm-05.html': '/blog/articles/farm-05.html',
+  '/375-05.html': '/blog/articles/375-05.html',
+  '/375-overview.html': '/blog/',
+  '/road-land.html': '/',
+  '/what-is-road-land.html': '/pages/road-land.html',
+  '/rl-12.html': '/blog/articles/rl-12.html',
+  '/an-07.html': '/blog/articles/an-07.html',
 };
 
 // ============================================
@@ -120,6 +187,11 @@ function getRedirectTarget(pathname) {
   // 1. 精確對應表
   if (EXACT_REDIRECTS[path]) {
     return EXACT_REDIRECTS[path];
+  }
+
+  // 1.5. 根目錄舊命名 HTML 檔（Phase 1 deduplication）
+  if (LEGACY_FILE_REDIRECTS[path]) {
+    return LEGACY_FILE_REDIRECTS[path];
   }
 
   // 2. 文章頁格式：/f/[標題] 或 /首頁/f/[標題]
