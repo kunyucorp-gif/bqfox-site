@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+<defs>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1a1410"/>
+    <stop offset="100%" stop-color="#2a1f18"/>
+  </linearGradient>
+  <radialGradient id="glow1" cx="80%" cy="20%">
+    <stop offset="0%" stop-color="#d4aa52" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#d4aa52" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glow2" cx="15%" cy="85%">
+    <stop offset="0%" stop-color="#b8923a" stop-opacity="0.12"/>
+    <stop offset="50%" stop-color="#b8923a" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#d4aa52" opacity="0.08"/>
+  </pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#glow1)"/>
+<rect width="1200" height="630" fill="url(#glow2)"/>
+<rect width="1200" height="630" fill="url(#dots)"/>
+<!-- Top gold line -->
+<rect x="0" y="0" width="1200" height="4" fill="#b8923a"/>
+<!-- Bottom gold line -->
+<rect x="0" y="626" width="1200" height="4" fill="#b8923a"/>
+<g transform="translate(80, 70) scale(1.0)">
+  <circle cx="60" cy="60" r="60" fill="#8a6e24"/>
+  <circle cx="60" cy="60" r="58" fill="#b8923a"/>
+  <circle cx="60" cy="60" r="56" fill="#c9a040"/>
+  <circle cx="60" cy="60" r="54" fill="#d4aa52"/>
+  <circle cx="60" cy="60" r="51" fill="#1a1410"/>
+  <rect x="47" y="42" width="26" height="40" fill="#b8923a"/>
+  <rect x="51" y="36" width="18" height="7" fill="#b8923a"/>
+  <rect x="55" y="30" width="10" height="7" fill="#b8923a"/>
+  <polygon points="60,22 58,30 62,30" fill="#d4aa52"/>
+  <circle cx="60" cy="22" r="2" fill="#d4aa52"/>
+  <g fill="#1a1410">
+    <rect x="49" y="45" width="4" height="4"/><rect x="56" y="45" width="4" height="4"/><rect x="63" y="45" width="4" height="4"/>
+    <rect x="49" y="51" width="4" height="4"/><rect x="56" y="51" width="4" height="4"/><rect x="63" y="51" width="4" height="4"/>
+    <rect x="49" y="57" width="4" height="4"/><rect x="56" y="57" width="4" height="4"/><rect x="63" y="57" width="4" height="4"/>
+    <rect x="56" y="63" width="4" height="4"/>
+  </g>
+  <rect x="40" y="82" width="40" height="3" fill="#b8923a"/>
+  <rect x="35" y="85" width="50" height="2" fill="#b8923a" opacity="0.6"/>
+</g>
+<!-- Brand title next to logo -->
+<g transform="translate(220, 95)">
+  <text fill="#f7efe0" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="30" font-weight="700" letter-spacing="4">寶璣建設</text>
+  <text y="30" fill="#b8923a" font-family="'SF Pro Display',sans-serif" font-size="14" letter-spacing="3">BAU QI · 特殊土地專業代辦</text>
+</g>
+
+<!-- Main headline -->
+<g transform="translate(80, 260)">
+  <text fill="#f7efe0" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="82" font-weight="800" letter-spacing="4">台灣特殊土地全方位代辦</text>
+</g>
+<!-- Subtitle -->
+<g transform="translate(80, 375)">
+  <text fill="#d4aa52" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="30" font-weight="400" letter-spacing="3">道路用地・容積移轉・祭祀公業・持份土地・兩岸繼承</text>
+</g>
+<!-- Detail line -->
+<g transform="translate(80, 430)">
+  <text fill="#c4b594" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="21" font-weight="300" letter-spacing="2">律師與地政士全程陪同 · 初次諮詢免費 · 5個工作天書面報價</text>
+</g>
+
+<!-- Footer bar with phone -->
+<g transform="translate(80, 530)">
+  <text fill="#d4aa52" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="22" font-weight="500" letter-spacing="2">BAU QI CONSTRUCTION · 寶璣建設有限公司</text>
+  <text y="34" fill="#c4b594" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="19">新北市板橋區 · 深耕 10 年 · 律師與地政士全程陪同</text>
+</g>
+<g transform="translate(880, 530)">
+  <rect x="0" y="0" width="240" height="62" rx="6" fill="#b8923a"/>
+  <text x="120" y="28" text-anchor="middle" fill="#1a1410" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="13" font-weight="500" letter-spacing="3">免費諮詢專線</text>
+  <text x="120" y="52" text-anchor="middle" fill="#1a1410" font-family="'SF Mono',monospace" font-size="22" font-weight="700">02-2274-6789</text>
+</g>
+</svg>
