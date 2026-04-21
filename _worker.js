@@ -107,6 +107,41 @@ const LEGACY_FILE_REDIRECTS = {
 };
 
 // ============================================
+// Phase 6 (Batch 1)：精確文章 URL → 新文章
+// 舊的 /f/xxx 標題，精確轉到對應的新文章（優先於關鍵字規則）
+// ============================================
+const ARTICLE_PRECISE_REDIRECTS = {
+  '/f/分別共有可以出租嗎？——土地專家的淺白解說': '/blog/articles/co-rental-fenbie.html',
+  '/首頁/f/分別共有可以出租嗎？——土地專家的淺白解說': '/blog/articles/co-rental-fenbie.html',
+  '/f/分別共有可以出租嗎？': '/blog/articles/co-rental-fenbie.html',
+  '/首頁/f/分別共有可以出租嗎？': '/blog/articles/co-rental-fenbie.html',
+  '/f/如何知道土地是共同共有還是分別共有？': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/首頁/f/如何知道土地是共同共有還是分別共有？': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/f/「公同共有」與「分別共有」的差別？': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/首頁/f/「公同共有」與「分別共有」的差別？': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/f/「公同共有」與「分別共有」的差別': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/首頁/f/「公同共有」與「分別共有」的差別': '/blog/articles/co-vs-joint-ownership-distinction.html',
+  '/f/分別共有可以贈與嗎？': '/blog/articles/co-ownership-gift-guide.html',
+  '/首頁/f/分別共有可以贈與嗎？': '/blog/articles/co-ownership-gift-guide.html',
+  '/f/分別共有土地贈與': '/blog/articles/co-ownership-gift-guide.html',
+  '/首頁/f/分別共有土地贈與': '/blog/articles/co-ownership-gift-guide.html',
+  '/f/持分土地可以鑑界嗎？': '/blog/articles/co-ownership-boundary-survey.html',
+  '/首頁/f/持分土地可以鑑界嗎？': '/blog/articles/co-ownership-boundary-survey.html',
+  '/f/持分土地要怎麼定價？影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
+  '/首頁/f/持分土地要怎麼定價？影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
+  '/f/持分土地能蓋房子嗎？法規限制與申請程序解析': '/blog/articles/co-ownership-building-house.html',
+  '/首頁/f/持分土地能蓋房子嗎？法規限制與申請程序解析': '/blog/articles/co-ownership-building-house.html',
+  '/f/持分土地可以買賣嗎？注意事項與交易流程全解析': '/blog/articles/co-ownership-buy-sell-guide.html',
+  '/首頁/f/持分土地可以買賣嗎？注意事項與交易流程全解析': '/blog/articles/co-ownership-buy-sell-guide.html',
+  '/f/【超詳解懶人包】一張圖搞懂共有土地分割！專家教你避開法律陷阱': '/blog/articles/co-ownership-partition-guide.html',
+  '/首頁/f/【超詳解懶人包】一張圖搞懂共有土地分割！專家教你避開法律陷阱': '/blog/articles/co-ownership-partition-guide.html',
+  '/f/持分土地怎麼繼承？避免爭議的-3-個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
+  '/首頁/f/持分土地怎麼繼承？避免爭議的-3-個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
+  '/f/持分土地怎麼繼承？避免爭議的 3 個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
+  '/首頁/f/持分土地怎麼繼承？避免爭議的 3 個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
+};
+
+// ============================================
 // 關鍵字分類規則：依文章標題自動分派到最相關頁面
 // 順序重要：特異性高的放前面
 // ============================================
@@ -203,6 +238,10 @@ function getRedirectTarget(pathname) {
   }
 
   if (articleTitle) {
+    // 先檢查精確文章對應（Phase 6）
+    if (ARTICLE_PRECISE_REDIRECTS[path]) {
+      return ARTICLE_PRECISE_REDIRECTS[path];
+    }
     // 依關鍵字判定
     for (const rule of KEYWORD_RULES) {
       for (const kw of rule.keywords) {
