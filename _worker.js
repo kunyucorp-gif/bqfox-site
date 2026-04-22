@@ -9,6 +9,11 @@
  *
  * 部署：放在 bqfox-site repo 根目錄（與 index.html 同層），推上 GitHub
  *      Cloudflare 會自動偵測 _worker.js 並啟用 JavaScript 邏輯
+ *
+ * 版本歷程：
+ *   - Phase 0-5: 基礎建設
+ *   - Phase 6 Batch 1 (2026-04-22): 9 篇持分/共有土地主題新文章
+ *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章 ← 本次更新
  */
 
 // ============================================
@@ -107,10 +112,11 @@ const LEGACY_FILE_REDIRECTS = {
 };
 
 // ============================================
-// Phase 6 (Batch 1)：精確文章 URL → 新文章
+// Phase 6：精確文章 URL → 新文章
 // 舊的 /f/xxx 標題，精確轉到對應的新文章（優先於關鍵字規則）
 // ============================================
 const ARTICLE_PRECISE_REDIRECTS = {
+  // ===== Batch 1 持分/共有土地主題（2026-04-22） =====
   '/f/分別共有可以出租嗎？——土地專家的淺白解說': '/blog/articles/co-rental-fenbie.html',
   '/首頁/f/分別共有可以出租嗎？——土地專家的淺白解說': '/blog/articles/co-rental-fenbie.html',
   '/f/分別共有可以出租嗎？': '/blog/articles/co-rental-fenbie.html',
@@ -127,8 +133,8 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/首頁/f/分別共有土地贈與': '/blog/articles/co-ownership-gift-guide.html',
   '/f/持分土地可以鑑界嗎？': '/blog/articles/co-ownership-boundary-survey.html',
   '/首頁/f/持分土地可以鑑界嗎？': '/blog/articles/co-ownership-boundary-survey.html',
-  '/f/持分土地要怎麼定價？影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
-  '/首頁/f/持分土地要怎麼定價？影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
+  '/f/持分土地要怎麼定價?影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
+  '/首頁/f/持分土地要怎麼定價?影響價格的關鍵因素一次看': '/blog/articles/co-ownership-pricing.html',
   '/f/持分土地能蓋房子嗎？法規限制與申請程序解析': '/blog/articles/co-ownership-building-house.html',
   '/首頁/f/持分土地能蓋房子嗎？法規限制與申請程序解析': '/blog/articles/co-ownership-building-house.html',
   '/f/持分土地可以買賣嗎？注意事項與交易流程全解析': '/blog/articles/co-ownership-buy-sell-guide.html',
@@ -139,6 +145,55 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/首頁/f/持分土地怎麼繼承？避免爭議的-3-個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
   '/f/持分土地怎麼繼承？避免爭議的 3 個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
   '/首頁/f/持分土地怎麼繼承？避免爭議的 3 個關鍵重點': '/blog/articles/co-ownership-inheritance.html',
+
+  // ===== Batch 2 道路用地主題（2026-04-22 新增） =====
+  // 1. 道路用地可以蓋房子嗎（GSC 歷史點擊 357）
+  '/f/道路用地可以蓋房子嗎？資深地政專家教你破解「公共設施保留地」的5大迷思': '/blog/articles/road-land-can-build-house.html',
+  '/首頁/f/道路用地可以蓋房子嗎？資深地政專家教你破解「公共設施保留地」的5大迷思': '/blog/articles/road-land-can-build-house.html',
+  '/f/道路用地可以蓋房子嗎？資深地政專家教你破解公共設施保留地的5大迷思': '/blog/articles/road-land-can-build-house.html',
+  '/首頁/f/道路用地可以蓋房子嗎？資深地政專家教你破解公共設施保留地的5大迷思': '/blog/articles/road-land-can-build-house.html',
+
+  // 2. 道路用地可以圍起來嗎（GSC 歷史點擊 283）
+  '/f/道路用地可以圍起來嗎？': '/blog/articles/road-land-fencing-rules.html',
+  '/首頁/f/道路用地可以圍起來嗎？': '/blog/articles/road-land-fencing-rules.html',
+  '/f/道路用地可以圍起來嗎': '/blog/articles/road-land-fencing-rules.html',
+  '/首頁/f/道路用地可以圍起來嗎': '/blog/articles/road-land-fencing-rules.html',
+
+  // 3. 馬路學問大!私設/既成/計畫道路差異（GSC 歷史點擊 278）
+  '/f/馬路學問大！3分鐘看懂「私設既成計畫道路」差在哪裡': '/blog/articles/road-types-distinction.html',
+  '/首頁/f/馬路學問大！3分鐘看懂「私設既成計畫道路」差在哪裡': '/blog/articles/road-types-distinction.html',
+  '/f/馬路學問大！3分鐘看懂「私設/既成/計畫道路」差在哪裡': '/blog/articles/road-types-distinction.html',
+  '/首頁/f/馬路學問大！3分鐘看懂「私設/既成/計畫道路」差在哪裡': '/blog/articles/road-types-distinction.html',
+
+  // 4. 建地臨接未開闢計畫道路（GSC 歷史點擊 266）
+  '/f/建地臨接「未開闢都市計畫道路」，可申請興建嗎？': '/blog/articles/build-near-unopened-planned-road.html',
+  '/首頁/f/建地臨接「未開闢都市計畫道路」，可申請興建嗎？': '/blog/articles/build-near-unopened-planned-road.html',
+  '/f/建地臨接未開闢都市計畫道路可申請興建嗎': '/blog/articles/build-near-unopened-planned-road.html',
+  '/首頁/f/建地臨接未開闢都市計畫道路可申請興建嗎': '/blog/articles/build-near-unopened-planned-road.html',
+
+  // 5. 道路用地公告現值全攻略（GSC 歷史點擊 230）
+  '/f/道路用地公告現值全攻略｜看懂政府估價眉角，避免吃虧的7大重點': '/blog/articles/road-land-public-value-guide.html',
+  '/首頁/f/道路用地公告現值全攻略｜看懂政府估價眉角，避免吃虧的7大重點': '/blog/articles/road-land-public-value-guide.html',
+  '/f/道路用地公告現值全攻略看懂政府估價眉角避免吃虧的7大重點': '/blog/articles/road-land-public-value-guide.html',
+  '/首頁/f/道路用地公告現值全攻略看懂政府估價眉角避免吃虧的7大重點': '/blog/articles/road-land-public-value-guide.html',
+
+  // 6. 公共設施保留地完全攻略（GSC 歷史點擊 144）
+  '/f/公共設施保留地完全攻略：從定義到活用一次看懂': '/blog/articles/public-facility-reserved-land-complete-guide.html',
+  '/首頁/f/公共設施保留地完全攻略：從定義到活用一次看懂': '/blog/articles/public-facility-reserved-land-complete-guide.html',
+  '/f/公共設施保留地完全攻略從定義到活用一次看懂': '/blog/articles/public-facility-reserved-land-complete-guide.html',
+  '/首頁/f/公共設施保留地完全攻略從定義到活用一次看懂': '/blog/articles/public-facility-reserved-land-complete-guide.html',
+
+  // 7. 道路用地抵稅終極攻略（GSC 歷史點擊 122）
+  '/f/《道路用地抵稅終極攻略》——從法條解析到實戰操作的7大關鍵指南': '/blog/articles/road-land-tax-offset-guide.html',
+  '/首頁/f/《道路用地抵稅終極攻略》——從法條解析到實戰操作的7大關鍵指南': '/blog/articles/road-land-tax-offset-guide.html',
+  '/f/道路用地抵稅終極攻略從法條解析到實戰操作的7大關鍵指南': '/blog/articles/road-land-tax-offset-guide.html',
+  '/首頁/f/道路用地抵稅終極攻略從法條解析到實戰操作的7大關鍵指南': '/blog/articles/road-land-tax-offset-guide.html',
+
+  // 8. 公保地 vs 公設用地差異（GSC 歷史點擊 117）
+  '/f/【超圖解】買地前必看！公共設施保留地-vs-公共設施用地—搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
+  '/首頁/f/【超圖解】買地前必看！公共設施保留地-vs-公共設施用地—搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
+  '/f/超圖解買地前必看公共設施保留地vs公共設施用地搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
+  '/首頁/f/超圖解買地前必看公共設施保留地vs公共設施用地搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
 };
 
 // ============================================

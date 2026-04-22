@@ -451,4 +451,72 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- ===== Batch 2 - 8 篇新 AI 重寫文章 道路用地主題（2026-04-22） ===== -->
+  <!-- 預期恢復歷史月點擊：1,797 次 -->
+
+  <!-- 道路用地可以蓋房子嗎（歷史點擊 357） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-can-build-house.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 道路用地可以圍起來嗎（歷史點擊 283） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-fencing-rules.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 私設/既成/計畫道路差異（歷史點擊 278） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-types-distinction.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 建地臨接未開闢計畫道路（歷史點擊 266） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/build-near-unopened-planned-road.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 道路用地公告現值全攻略（歷史點擊 230） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-public-value-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 公共設施保留地完全攻略（歷史點擊 144） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/public-facility-reserved-land-complete-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 道路用地抵稅終極攻略（歷史點擊 122） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-tax-offset-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 公保地 vs 公設用地差異（歷史點擊 117） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/reserved-vs-used-public-facility-land.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
