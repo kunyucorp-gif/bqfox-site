@@ -14,7 +14,8 @@
  *   - Phase 0-5: 基礎建設
  *   - Phase 6 Batch 1 (2026-04-22): 9 篇持分/共有土地主題新文章
  *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章
- *   - Phase 6 Batch 3 (2026-04-22): 8 篇三七五+祭祀公業主題新文章 ← 本次更新
+ *   - Phase 6 Batch 3 (2026-04-22): 8 篇三七五+祭祀公業主題新文章
+ *   - Phase 6 Batch 4a (2026-04-22): 8 篇多元主題新文章 ← 本次更新
  */
 
 // ============================================
@@ -242,6 +243,48 @@ const ARTICLE_PRECISE_REDIRECTS = {
   // 8. 神明會土地交易解密（GSC 歷史點擊 44）
   '/f/神明會土地交易解密': '/blog/articles/shrine-association-land-trading.html',
   '/首頁/f/神明會土地交易解密': '/blog/articles/shrine-association-land-trading.html',
+
+  // ===== Batch 4a 多元主題（2026-04-22 新增） =====
+  // 1. 農地解除套繪管制（GSC 歷史點擊 274）
+  '/f/農地解除套繪管制全攻略｜20年土地開發專家教你搞懂關鍵步驟': '/blog/articles/farm-land-annex-release-guide.html',
+  '/首頁/f/農地解除套繪管制全攻略｜20年土地開發專家教你搞懂關鍵步驟': '/blog/articles/farm-land-annex-release-guide.html',
+  '/f/農地解除套繪管制全攻略20年土地開發專家教你搞懂關鍵步驟': '/blog/articles/farm-land-annex-release-guide.html',
+
+  // 2. 什麼土地可以蓋民宿（GSC 歷史點擊 263）
+  '/f/什麼樣的土地可以用來蓋民宿？': '/blog/articles/which-land-for-bnb.html',
+  '/首頁/f/什麼樣的土地可以用來蓋民宿？': '/blog/articles/which-land-for-bnb.html',
+  '/f/什麼樣的土地可以用來蓋民宿': '/blog/articles/which-land-for-bnb.html',
+  '/首頁/f/什麼樣的土地可以用來蓋民宿': '/blog/articles/which-land-for-bnb.html',
+
+  // 3. 繼承農地補稅指南（GSC 歷史點擊 247）
+  '/f/繼承農地補稅指南｜搞懂這些規定免花冤枉錢（2025最新版）': '/blog/articles/inherit-farm-land-tax-guide.html',
+  '/首頁/f/繼承農地補稅指南｜搞懂這些規定免花冤枉錢（2025最新版）': '/blog/articles/inherit-farm-land-tax-guide.html',
+  '/f/繼承農地補稅指南搞懂這些規定免花冤枉錢2025最新版': '/blog/articles/inherit-farm-land-tax-guide.html',
+
+  // 4. 未保存登記建物（GSC 歷史點擊 220）
+  '/f/未保存登記建物是什麼？會被拆嗎？專家帶你一次看懂所有權與補登流程': '/blog/articles/unregistered-building.html',
+  '/首頁/f/未保存登記建物是什麼？會被拆嗎？專家帶你一次看懂所有權與補登流程': '/blog/articles/unregistered-building.html',
+  '/f/未保存登記建物是什麼會被拆嗎專家帶你一次看懂所有權與補登流程': '/blog/articles/unregistered-building.html',
+
+  // 5. 長輩土地詐騙（GSC 歷史點擊 202）
+  '/f/長輩名下土地最易出事？詐騙怎樣下手你知道嗎？': '/blog/articles/elder-land-fraud-prevention.html',
+  '/首頁/f/長輩名下土地最易出事？詐騙怎樣下手你知道嗎？': '/blog/articles/elder-land-fraud-prevention.html',
+  '/f/長輩名下土地最易出事詐騙怎樣下手你知道嗎': '/blog/articles/elder-land-fraud-prevention.html',
+
+  // 6. 農地農舍移轉懶人包（GSC 歷史點擊 194）
+  '/f/農地農舍移轉懶人包｜帶您看懂關鍵眉角': '/blog/articles/farm-land-house-transfer-guide.html',
+  '/首頁/f/農地農舍移轉懶人包｜帶您看懂關鍵眉角': '/blog/articles/farm-land-house-transfer-guide.html',
+  '/f/農地農舍移轉懶人包帶您看懂關鍵眉角': '/blog/articles/farm-land-house-transfer-guide.html',
+
+  // 7. 地價稅調漲全解析(GSC 歷史點擊 152）
+  '/f/地價稅調漲全解析：六種情境看懂你的稅單為何變貴': '/blog/articles/land-value-tax-increase.html',
+  '/首頁/f/地價稅調漲全解析：六種情境看懂你的稅單為何變貴': '/blog/articles/land-value-tax-increase.html',
+  '/f/地價稅調漲全解析六種情境看懂你的稅單為何變貴': '/blog/articles/land-value-tax-increase.html',
+
+  // 8. 贈與農地給子女（GSC 歷史點擊 136）
+  '/f/贈與農地給子女：直接贈與和信託有什麼不同？怎樣才能免繳贈與稅？': '/blog/articles/gift-farm-land-to-children.html',
+  '/首頁/f/贈與農地給子女：直接贈與和信託有什麼不同？怎樣才能免繳贈與稅？': '/blog/articles/gift-farm-land-to-children.html',
+  '/f/贈與農地給子女直接贈與和信託有什麼不同怎樣才能免繳贈與稅': '/blog/articles/gift-farm-land-to-children.html',
 };
 
 // ============================================

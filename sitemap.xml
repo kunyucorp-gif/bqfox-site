@@ -587,4 +587,64 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- ===== Batch 4a - 8 篇新 AI 重寫文章 多元主題（2026-04-22） ===== -->
+  <!-- 預期恢復歷史月點擊：1,688 次 -->
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/farm-land-annex-release-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/which-land-for-bnb.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/inherit-farm-land-tax-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/unregistered-building.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/elder-land-fraud-prevention.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/farm-land-house-transfer-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/land-value-tax-increase.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/gift-farm-land-to-children.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
