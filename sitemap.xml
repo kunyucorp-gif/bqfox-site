@@ -809,4 +809,64 @@
     <priority>0.7</priority>
   </url>
 
+
+  <!-- ===== Batch 6 - 8 篇新 AI 進攻型文章 容積移轉主題群（2026-04-22） ===== -->
+  <!-- 目標:搶佔容積移轉關鍵字,曝光潛力 11,292/月 -->
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-floor-area-transfer-price.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-floor-area-transfer-overview.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/floor-area-transfer-conditions.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/what-is-floor-area-transfer.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/floor-area-transfer-buy-sell.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/floor-area-transfer-pros-cons.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/road-land-floor-area-bonus.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/floor-area-transfer-cases.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
