@@ -15,7 +15,8 @@
  *   - Phase 6 Batch 1 (2026-04-22): 9 篇持分/共有土地主題新文章
  *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章
  *   - Phase 6 Batch 3 (2026-04-22): 8 篇三七五+祭祀公業主題新文章
- *   - Phase 6 Batch 4a (2026-04-22): 8 篇多元主題新文章 ← 本次更新
+ *   - Phase 6 Batch 4a (2026-04-22): 8 篇多元主題新文章
+ *   - Phase 6 Batch 4b (2026-04-22): 7 篇多元主題新文章(收官) ← 本次更新
  */
 
 // ============================================
@@ -285,6 +286,42 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/贈與農地給子女：直接贈與和信託有什麼不同？怎樣才能免繳贈與稅？': '/blog/articles/gift-farm-land-to-children.html',
   '/首頁/f/贈與農地給子女：直接贈與和信託有什麼不同？怎樣才能免繳贈與稅？': '/blog/articles/gift-farm-land-to-children.html',
   '/f/贈與農地給子女直接贈與和信託有什麼不同怎樣才能免繳贈與稅': '/blog/articles/gift-farm-land-to-children.html',
+
+  // ===== Batch 4b 多元主題 後半 7 篇（2026-04-22 新增） =====
+  // 1. 查土地所有人（GSC 歷史點擊 121）
+  '/f/三分鐘教你查清楚：土地真正的所有人是誰': '/blog/articles/land-owner-lookup-guide.html',
+  '/首頁/f/三分鐘教你查清楚：土地真正的所有人是誰': '/blog/articles/land-owner-lookup-guide.html',
+  '/f/三分鐘教你查清楚土地真正的所有人是誰': '/blog/articles/land-owner-lookup-guide.html',
+
+  // 2. 都市計畫綠地（GSC 歷史點擊 108）
+  '/f/都市計畫綠地是什麼？完整解析綠地土地使用限制、可用範圍與違規風險！': '/blog/articles/urban-green-land-guide.html',
+  '/首頁/f/都市計畫綠地是什麼？完整解析綠地土地使用限制、可用範圍與違規風險！': '/blog/articles/urban-green-land-guide.html',
+  '/f/都市計畫綠地是什麼完整解析綠地土地使用限制可用範圍與違規風險': '/blog/articles/urban-green-land-guide.html',
+
+  // 3. 既成道路地主權利（GSC 歷史點擊 98）
+  '/f/既成道路地主權利全解析｜私人土地變「公用路」後，你該知道的真相！！': '/blog/articles/existing-road-landowner-rights.html',
+  '/首頁/f/既成道路地主權利全解析｜私人土地變「公用路」後，你該知道的真相！！': '/blog/articles/existing-road-landowner-rights.html',
+  '/f/既成道路地主權利全解析私人土地變公用路後你該知道的真相': '/blog/articles/existing-road-landowner-rights.html',
+
+  // 4. 土地增值稅免徵（GSC 歷史點擊 91）
+  '/f/土地增值稅免徵範圍全解析：輕鬆搞懂哪些情況不用繳稅': '/blog/articles/land-value-increment-tax-exemption.html',
+  '/首頁/f/土地增值稅免徵範圍全解析：輕鬆搞懂哪些情況不用繳稅': '/blog/articles/land-value-increment-tax-exemption.html',
+  '/f/土地增值稅免徵範圍全解析輕鬆搞懂哪些情況不用繳稅': '/blog/articles/land-value-increment-tax-exemption.html',
+
+  // 5. 法定空地（GSC 歷史點擊 90）
+  '/f/認識法定空地：建築用地中不可忽略的隱形規定': '/blog/articles/statutory-open-space.html',
+  '/首頁/f/認識法定空地：建築用地中不可忽略的隱形規定': '/blog/articles/statutory-open-space.html',
+  '/f/認識法定空地建築用地中不可忽略的隱形規定': '/blog/articles/statutory-open-space.html',
+
+  // 6. 地上權移轉登記（GSC 歷史點擊 89）
+  '/f/地上權移轉登記全攻略：從基礎概念到實務操作一次搞懂': '/blog/articles/land-superficies-transfer.html',
+  '/首頁/f/地上權移轉登記全攻略：從基礎概念到實務操作一次搞懂': '/blog/articles/land-superficies-transfer.html',
+  '/f/地上權移轉登記全攻略從基礎概念到實務操作一次搞懂': '/blog/articles/land-superficies-transfer.html',
+
+  // 7. 持分土地強制分割（GSC 歷史點擊 85）
+  '/f/持分土地能強制分割嗎？法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
+  '/首頁/f/持分土地能強制分割嗎？法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
+  '/f/持分土地能強制分割嗎法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
 };
 
 // ============================================

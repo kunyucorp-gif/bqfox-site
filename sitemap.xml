@@ -647,4 +647,57 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- ===== Batch 4b - 7 篇新 AI 重寫文章 多元主題（2026-04-22，Batch 4 後半） ===== -->
+  <!-- 預期恢復歷史月點擊：682 次 -->
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/land-owner-lookup-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/urban-green-land-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/existing-road-landowner-rights.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/land-value-increment-tax-exemption.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/statutory-open-space.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/land-superficies-transfer.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/co-ownership-forced-partition.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
