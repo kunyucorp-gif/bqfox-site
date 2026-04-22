@@ -519,4 +519,72 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- ===== Batch 3 - 8 篇新 AI 重寫文章 三七五+祭祀公業主題（2026-04-22） ===== -->
+  <!-- 預期恢復歷史月點擊：1,173 次 -->
+
+  <!-- 三七五減租廢除了嗎（歷史點擊 566 - Batch 3 最高） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/is-375-rent-reduction-abolished.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 三七五減租懶人包（歷史點擊 159） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/375-rent-reduction-easy-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 三七五減租釋憲解析（歷史點擊 113） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/375-constitutional-interpretation.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 三七五租約糾紛處理（歷史點擊 91） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/375-tenancy-dispute-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 祭祀公業與神明會土地實戰（歷史點擊 79） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/ancestral-land-shrine-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 祭祀公業土地標售全攻略（歷史點擊 74） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/ancestral-land-auction-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 祭祀公業完全解鎖手冊（歷史點擊 47） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/ancestral-land-complete-manual.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 神明會土地交易解密（歷史點擊 44） -->
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/shrine-association-land-trading.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

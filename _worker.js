@@ -13,7 +13,8 @@
  * 版本歷程：
  *   - Phase 0-5: 基礎建設
  *   - Phase 6 Batch 1 (2026-04-22): 9 篇持分/共有土地主題新文章
- *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章 ← 本次更新
+ *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章
+ *   - Phase 6 Batch 3 (2026-04-22): 8 篇三七五+祭祀公業主題新文章 ← 本次更新
  */
 
 // ============================================
@@ -194,6 +195,53 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/首頁/f/【超圖解】買地前必看！公共設施保留地-vs-公共設施用地—搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
   '/f/超圖解買地前必看公共設施保留地vs公共設施用地搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
   '/首頁/f/超圖解買地前必看公共設施保留地vs公共設施用地搞懂這3大差異才不會吃虧': '/blog/articles/reserved-vs-used-public-facility-land.html',
+
+  // ===== Batch 3 三七五+祭祀公業主題（2026-04-22 新增） =====
+  // 1. 三七五減租廢除了嗎（GSC 歷史點擊 566 - Batch 3 最高）
+  '/f/三七五減租廢除了嗎？': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/首頁/f/三七五減租廢除了嗎？': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/f/三七五減租廢除了嗎': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/首頁/f/三七五減租廢除了嗎': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/f/三七五減租已經廢除了嗎？': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/首頁/f/三七五減租已經廢除了嗎？': '/blog/articles/is-375-rent-reduction-abolished.html',
+
+  // 2. 三七五減租懶人包（GSC 歷史點擊 159）
+  '/f/三七五減租懶人包：讓您輕鬆了解最新規定': '/blog/articles/375-rent-reduction-easy-guide.html',
+  '/首頁/f/三七五減租懶人包：讓您輕鬆了解最新規定': '/blog/articles/375-rent-reduction-easy-guide.html',
+  '/f/三七五減租懶人包讓您輕鬆了解最新規定': '/blog/articles/375-rent-reduction-easy-guide.html',
+  '/首頁/f/三七五減租懶人包讓您輕鬆了解最新規定': '/blog/articles/375-rent-reduction-easy-guide.html',
+
+  // 3. 三七五減租釋憲解析（GSC 歷史點擊 113）
+  '/f/耕地三七五減租條例釋憲解析：地主收回土地的關鍵轉折': '/blog/articles/375-constitutional-interpretation.html',
+  '/首頁/f/耕地三七五減租條例釋憲解析：地主收回土地的關鍵轉折': '/blog/articles/375-constitutional-interpretation.html',
+  '/f/耕地三七五減租條例釋憲解析地主收回土地的關鍵轉折': '/blog/articles/375-constitutional-interpretation.html',
+  '/首頁/f/耕地三七五減租條例釋憲解析地主收回土地的關鍵轉折': '/blog/articles/375-constitutional-interpretation.html',
+
+  // 4. 三七五租約糾紛處理（GSC 歷史點擊 91）
+  '/f/三七五租約糾紛處理全攻略：從調解到強制執行的完整指南': '/blog/articles/375-tenancy-dispute-guide.html',
+  '/首頁/f/三七五租約糾紛處理全攻略：從調解到強制執行的完整指南': '/blog/articles/375-tenancy-dispute-guide.html',
+  '/f/三七五租約糾紛處理全攻略從調解到強制執行的完整指南': '/blog/articles/375-tenancy-dispute-guide.html',
+  '/首頁/f/三七五租約糾紛處理全攻略從調解到強制執行的完整指南': '/blog/articles/375-tenancy-dispute-guide.html',
+
+  // 5. 祭祀公業與神明會土地實戰（GSC 歷史點擊 79）
+  '/f/搞懂祭祀公業與神明會土地的實戰指南': '/blog/articles/ancestral-land-shrine-guide.html',
+  '/首頁/f/搞懂祭祀公業與神明會土地的實戰指南': '/blog/articles/ancestral-land-shrine-guide.html',
+
+  // 6. 祭祀公業土地標售全攻略（GSC 歷史點擊 74）
+  '/f/《祭祀公業土地標售全攻略》——從法條解密到實戰操作的7大關鍵步驟': '/blog/articles/ancestral-land-auction-guide.html',
+  '/首頁/f/《祭祀公業土地標售全攻略》——從法條解密到實戰操作的7大關鍵步驟': '/blog/articles/ancestral-land-auction-guide.html',
+  '/f/祭祀公業土地標售全攻略從法條解密到實戰操作的7大關鍵步驟': '/blog/articles/ancestral-land-auction-guide.html',
+  '/首頁/f/祭祀公業土地標售全攻略從法條解密到實戰操作的7大關鍵步驟': '/blog/articles/ancestral-land-auction-guide.html',
+
+  // 7. 祭祀公業完全解鎖手冊（GSC 歷史點擊 47）
+  '/f/《祭祀公業完全解鎖手冊》——從百年祖產到現代管理的5大關鍵策略': '/blog/articles/ancestral-land-complete-manual.html',
+  '/首頁/f/《祭祀公業完全解鎖手冊》——從百年祖產到現代管理的5大關鍵策略': '/blog/articles/ancestral-land-complete-manual.html',
+  '/f/祭祀公業完全解鎖手冊從百年祖產到現代管理的5大關鍵策略': '/blog/articles/ancestral-land-complete-manual.html',
+  '/首頁/f/祭祀公業完全解鎖手冊從百年祖產到現代管理的5大關鍵策略': '/blog/articles/ancestral-land-complete-manual.html',
+
+  // 8. 神明會土地交易解密（GSC 歷史點擊 44）
+  '/f/神明會土地交易解密': '/blog/articles/shrine-association-land-trading.html',
+  '/首頁/f/神明會土地交易解密': '/blog/articles/shrine-association-land-trading.html',
 };
 
 // ============================================
