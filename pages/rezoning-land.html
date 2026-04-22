@@ -15,78 +15,121 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重劃地買賣｜寶璣建設有限公司">
 <meta name="twitter:description" content="重劃地買賣">
-<style>/* 2026-04-22 Nav Black-Gold */
+<style>/* 2026-04-22 Nav v2 Spacing-Hamburger-Fix */
 
 /* ============================================================
-   Nav 黑金風統一樣式 + hover 穩定修復(2026-04-22)
-   讓所有頁面的 nav 長得跟首頁一樣,下拉選單穩定
+   Nav 間距修復 + 手機 Hamburger 修復(2026-04-22 v2)
    ============================================================ */
 
-/* Nav 主體:黑底金線 */
+/* Nav 主體:flexbox 布局,項目分散對齊 */
 .nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.75rem clamp(1.5rem, 3vw, 2.5rem) !important;
+  gap: clamp(1rem, 3vw, 2.5rem) !important;
   background: #0a0a0a !important;
   border-bottom: 1px solid #2a2824 !important;
-}
-.nav.scrolled {
-  background: rgba(10, 10, 10, 0.95) !important;
-  backdrop-filter: blur(10px);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  --nav-h: 72px;
 }
 
-/* Logo 區文字 */
+/* Logo */
+.nav .nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
 .nav .nav-logo-text strong {
   color: #f5f2ec !important;
   font-family: 'Noto Serif TC', serif !important;
+  font-size: 0.98rem !important;
+  font-weight: 500 !important;
+  display: block !important;
+  line-height: 1.3 !important;
 }
 .nav .nav-logo-text small {
   color: #c9a24d !important;
+  font-size: 0.68rem !important;
   letter-spacing: 0.08em !important;
+  display: block !important;
+  line-height: 1.3 !important;
 }
 
-/* Nav menu 項目 */
+/* ⭐ 關鍵修復:nav-menu 項目間距 */
 .nav .nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: clamp(1.5rem, 3vw, 2.5rem) !important;   /* ← 修復間距擠 */
   list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 1 !important;
+  justify-content: center !important;
 }
+
+.nav .nav-menu .nav-item {
+  position: relative !important;
+}
+
 .nav .nav-menu .nav-link {
   color: #f5f2ec !important;
   text-decoration: none !important;
   font-family: 'Noto Sans TC', sans-serif !important;
   font-weight: 400 !important;
+  font-size: 0.95rem !important;
   letter-spacing: 0.05em !important;
   padding: 0.5rem 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
   transition: color 0.3s !important;
 }
 .nav .nav-menu .nav-link:hover {
   color: #c9a24d !important;
 }
-.nav .nav-item .ic-chevron {
-  stroke: currentColor !important;
+
+/* Nav actions (電話 + LINE) */
+.nav .nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-shrink: 0 !important;
 }
 
-/* Nav tel 電話按鈕 */
 .nav .nav-tel {
   color: #c9a24d !important;
   text-decoration: none !important;
-  font-family: 'Noto Sans TC', sans-serif !important;
   font-weight: 500 !important;
-  letter-spacing: 0.05em !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.03em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
   transition: opacity 0.3s !important;
 }
 .nav .nav-tel:hover { opacity: 0.75 !important; }
 
-/* Nav LINE 按鈕 */
 .nav .nav-line-btn {
   background: #c9a24d !important;
   color: #0a0a0a !important;
   border: 1px solid #c9a24d !important;
-  padding: 0.55rem 1.1rem !important;
+  padding: 0.55rem 1.15rem !important;
   font-weight: 500 !important;
+  font-size: 0.88rem !important;
   letter-spacing: 0.05em !important;
   text-decoration: none !important;
-  font-family: 'Noto Sans TC', sans-serif !important;
   transition: all 0.3s !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.4rem !important;
+  white-space: nowrap !important;
 }
 .nav .nav-line-btn svg {
   width: 16px !important;
@@ -96,23 +139,18 @@
 .nav .nav-line-btn:hover {
   background: #d9b566 !important;
   border-color: #d9b566 !important;
-  transform: translateY(-1px) !important;
 }
 
-/* ===== Dropdown 穩定 + 黑金風 ===== */
-.nav .nav-item {
-  position: relative !important;
-}
+/* ===== Dropdown 黑金風 + hover 穩定 ===== */
 .nav .nav-dd {
   position: absolute !important;
   top: 100% !important;
   left: 0 !important;
-  padding-top: 12px !important;  /* 關鍵:hover 緩衝區 */
-  margin-top: 0 !important;
+  padding-top: 12px !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-  transition: opacity 0.2s ease, visibility 0.2s ease !important;
+  transition: opacity 0.2s, visibility 0.2s !important;
   z-index: 9999 !important;
   min-width: 220px !important;
   background: transparent !important;
@@ -125,8 +163,6 @@
   visibility: visible !important;
   pointer-events: auto !important;
 }
-
-/* Dropdown 項目 */
 .nav .nav-dd > a {
   display: block !important;
   padding: 0.85rem 1.5rem !important;
@@ -134,34 +170,138 @@
   color: #f5f2ec !important;
   text-decoration: none !important;
   font-size: 0.92rem !important;
-  font-family: 'Noto Sans TC', sans-serif !important;
   font-weight: 400 !important;
   letter-spacing: 0.05em !important;
   border-bottom: 1px solid #2a2824 !important;
-  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease !important;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s !important;
   white-space: nowrap !important;
 }
-.nav .nav-dd > a:first-child {
-  border-top: 2px solid #c9a24d !important;
-}
-.nav .nav-dd > a:last-child {
-  border-bottom: none !important;
-}
+.nav .nav-dd > a:first-child { border-top: 2px solid #c9a24d !important; }
+.nav .nav-dd > a:last-child { border-bottom: none !important; }
 .nav .nav-dd > a:hover {
   background: #0a0a0a !important;
   color: #c9a24d !important;
   padding-left: 1.75rem !important;
 }
 
-/* 手機版(< 900px):dropdown 變成攤平列表 */
+/* ===== Hamburger 按鈕(桌機隱藏) ===== */
+.nav .hamburger {
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0.5rem !important;
+  width: 40px !important;
+  height: 40px !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 5px !important;
+  z-index: 1001 !important;
+}
+.nav .hamburger span {
+  display: block !important;
+  width: 24px !important;
+  height: 2px !important;
+  background: #f5f2ec !important;
+  transition: all 0.3s !important;
+}
+
+/* Hamburger 展開時變 X */
+.nav .hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+}
+.nav .hamburger.open span:nth-child(2) {
+  opacity: 0 !important;
+}
+.nav .hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+}
+
+/* ===== 手機版(<= 900px) ===== */
 @media (max-width: 900px) {
+  .nav {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .nav .hamburger {
+    display: flex !important;
+  }
+  
+  /* menu 改為 overlay 從上方展開 */
+  .nav .nav-menu {
+    position: fixed !important;
+    top: var(--nav-h, 72px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #0a0a0a !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    padding: 1rem 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    border-bottom: 1px solid #2a2824 !important;
+  }
+  
+  .nav .nav-menu.open {
+    max-height: calc(100vh - var(--nav-h, 72px)) !important;
+    overflow-y: auto !important;
+  }
+  
+  .nav .nav-menu .nav-item {
+    width: 100% !important;
+    border-bottom: 1px solid #2a2824 !important;
+  }
+  
+  .nav .nav-menu .nav-link {
+    padding: 1rem 1.5rem !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  
+  /* 手機版 dropdown 攤平 */
   .nav .nav-dd {
     position: static !important;
     padding-top: 0 !important;
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
+    min-width: auto !important;
+    background: #141414 !important;
   }
+  
+  .nav .nav-dd > a {
+    padding-left: 2.5rem !important;
+    font-size: 0.88rem !important;
+  }
+  .nav .nav-dd > a:first-child { border-top: none !important; }
+  
+  /* Nav actions 隱藏某些 */
+  .nav .nav-actions .nav-tel {
+    display: none !important;
+  }
+  .nav .nav-line-btn {
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .nav .nav-logo-text small {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav .nav-logo-text strong {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* 頁面 padding-top 避免被 fixed nav 遮住 */
+body {
+  padding-top: var(--nav-h, 72px) !important;
 }
 
 </style>
@@ -360,5 +500,59 @@
   </div>
 </footer>
 <script src="../assets/main.js"></script>
+
+<script>
+// Hamburger toggle(2026-04-22 修復)
+(function(){
+  function initHamburger() {
+    var btn = document.getElementById('hbtn');
+    var menu = document.querySelector('.nav .nav-menu');
+    if (!btn || !menu) return;
+    
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    
+    // 點擊選單連結後關閉
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // 點擊外部關閉
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHamburger);
+  } else {
+    initHamburger();
+  }
+})();
+
+// Nav scroll 效果
+(function(){
+  var nav = document.getElementById('nav');
+  if (!nav) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+})();
+</script>
+
 </body>
 </html>
