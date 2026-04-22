@@ -1223,6 +1223,146 @@ main#bqv4-home .bqv4-eyebrow::before {
   </div>
 </section>
 
+<!-- ==============================================================
+     KNOWLEDGE CENTER 知識專區(新增 Level 2)
+     連結到 87 篇專業文章
+     ============================================================== -->
+<section id="bqv4-knowledge" style="padding:clamp(5rem,10vw,9rem) 0;background:var(--bqv4-black);border-bottom:1px solid var(--bqv4-divider);">
+  <div class="bqv4-wrap">
+    <div class="bqv4-section-header">
+      <span class="bqv4-eyebrow">知識專區 · Knowledge Center</span>
+      <h2><em>87 篇</em>專業深度文章</h2>
+      <p>由律師與地政士親撰,涵蓋道路用地、容積移轉、持分土地等 8 大主題。從法律依據到六都實戰案例,完整解析台灣最複雜的土地議題。</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;margin-top:4rem;border-top:1px solid var(--bqv4-divider);border-left:1px solid var(--bqv4-divider);">
+
+      <a href="/blog/#cat-road-land" class="bqv4-knowledge-card">
+        <span class="num">30</span>
+        <h3>道路用地・公保地</h3>
+        <p>道路用地買賣、公保地解編、既成道路補償、機關用地等完整主題</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-co-ownership" class="bqv4-knowledge-card">
+        <span class="num">26</span>
+        <h3>持分土地</h3>
+        <p>分別共有買賣、強制分割、優先購買權、共有人整合完整指南</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-rezoning-land" class="bqv4-knowledge-card">
+        <span class="num">10</span>
+        <h3>重劃地 / 其他主題</h3>
+        <p>農地買賣、地上權、地籍清理、土地稅務、詐騙防範等</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-floor-area-ratio" class="bqv4-knowledge-card">
+        <span class="num">8</span>
+        <h3>容積移轉</h3>
+        <p>容積移轉原理、條件、買賣流程、價格計算、實戰案例全解析</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-ancestral-land" class="bqv4-knowledge-card">
+        <span class="num">5</span>
+        <h3>祭祀公業</h3>
+        <p>派下員處理、法人登記、祭祀公業土地標售、神明會土地</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-tenancy-375" class="bqv4-knowledge-card">
+        <span class="num">4</span>
+        <h3>三七五租約</h3>
+        <p>解約流程、補償談判、釋憲解析、糾紛處理完整指南</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-cross-strait-inheritance" class="bqv4-knowledge-card">
+        <span class="num">3</span>
+        <h3>兩岸三地繼承</h3>
+        <p>農地繼承、農地贈與、跨境不動產繼承專業文章</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+      <a href="/blog/#cat-joint-ownership" class="bqv4-knowledge-card">
+        <span class="num">1</span>
+        <h3>公同共有</h3>
+        <p>公同共有土地買賣完全攻略、處分程序、法律爭議</p>
+        <span class="arrow">查看全部 →</span>
+      </a>
+
+    </div>
+
+    <div style="text-align:center;margin-top:4rem;">
+      <a href="/blog/" class="bqv4-btn bqv4-btn-outline">進入完整知識專區 →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bqv4-knowledge-card {
+    display: block !important;
+    padding: 2.5rem 2rem !important;
+    border-right: 1px solid var(--bqv4-divider) !important;
+    border-bottom: 1px solid var(--bqv4-divider) !important;
+    background: var(--bqv4-black) !important;
+    text-decoration: none !important;
+    position: relative !important;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    overflow: hidden !important;
+  }
+  .bqv4-knowledge-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background: var(--bqv4-gold) !important;
+    transition: width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  }
+  .bqv4-knowledge-card:hover { background: var(--bqv4-black-card) !important; }
+  .bqv4-knowledge-card:hover::before { width: 100% !important; }
+  .bqv4-knowledge-card .num {
+    font-family: var(--bqv4-serif) !important;
+    font-size: 2.5rem !important;
+    color: var(--bqv4-gold) !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    display: block !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.03em !important;
+  }
+  .bqv4-knowledge-card h3 {
+    font-family: var(--bqv4-serif) !important;
+    font-size: 1.35rem !important;
+    font-weight: 400 !important;
+    color: var(--bqv4-white) !important;
+    margin: 0 0 0.75rem 0 !important;
+    line-height: 1.35 !important;
+  }
+  .bqv4-knowledge-card p {
+    font-size: 0.88rem !important;
+    color: var(--bqv4-white-muted) !important;
+    line-height: 1.75 !important;
+    font-weight: 300 !important;
+    margin: 0 0 1.5rem 0 !important;
+  }
+  .bqv4-knowledge-card .arrow {
+    font-family: var(--bqv4-serif) !important;
+    color: var(--bqv4-gold) !important;
+    font-size: 0.92rem !important;
+    letter-spacing: 0.05em !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    transition: gap 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  }
+  .bqv4-knowledge-card:hover .arrow { gap: 1rem !important; }
+</style>
+
 <!-- GEO SERVICE AREA (新增) -->
 <section id="bqv4-geo">
   <div class="bqv4-wrap">
