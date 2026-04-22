@@ -1,69 +1,7 @@
-# ══════════════════════════════════════════════════════════
-# 寶璣建設 bqfox.com robots.txt
-# Last updated: 2026-04-21 (Phase 4 — GEO optimization)
-# ══════════════════════════════════════════════════════════
-
-# 預設：所有爬蟲可訪問
 User-agent: *
 Allow: /
 Allow: /assets/
 Disallow: /.github/
 Disallow: /scripts/
-Disallow: /data/
 
-# ──────────────────────────────────────────────────────────
-# AI 爬蟲：明確允許
-# ──────────────────────────────────────────────────────────
-
-# OpenAI (ChatGPT, OpenAI Search)
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic (Claude)
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Google (AI Overviews / Gemini)
-User-agent: Google-Extended
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-# Common Crawl (被多家 LLM 訓練使用)
-User-agent: CCBot
-Allow: /
-
-# You.com
-User-agent: YouBot
-Allow: /
-
-# Apple (Apple Intelligence)
-User-agent: Applebot-Extended
-Allow: /
-
-# Meta AI
-User-agent: Meta-ExternalAgent
-Allow: /
-
-# ──────────────────────────────────────────────────────────
-# Sitemaps
-# ──────────────────────────────────────────────────────────
 Sitemap: https://www.bqfox.com/sitemap.xml
-
-# llms.txt — AI 引擎閱讀指引（新興標準）
-# https://llmstxt.org/
-# 位置：https://www.bqfox.com/llms.txt
