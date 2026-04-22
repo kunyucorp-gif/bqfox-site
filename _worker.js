@@ -16,7 +16,8 @@
  *   - Phase 6 Batch 2 (2026-04-22): 8 篇道路用地主題新文章
  *   - Phase 6 Batch 3 (2026-04-22): 8 篇三七五+祭祀公業主題新文章
  *   - Phase 6 Batch 4a (2026-04-22): 8 篇多元主題新文章
- *   - Phase 6 Batch 4b (2026-04-22): 7 篇多元主題新文章(收官) ← 本次更新
+ *   - Phase 6 Batch 4b (2026-04-22): 7 篇多元主題新文章
+ *   - Phase 6 Batch 5 (2026-04-22): 15 篇 Tier 2 TOP 15 文章(最終收官) ← 本次更新
  */
 
 // ============================================
@@ -322,6 +323,80 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/持分土地能強制分割嗎？法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
   '/首頁/f/持分土地能強制分割嗎？法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
   '/f/持分土地能強制分割嗎法院裁定的可能結果分析': '/blog/articles/co-ownership-forced-partition.html',
+
+  // ===== Batch 5 Tier 2 TOP 15（2026-04-22 新增,Phase 6 最終篇） =====
+  // 1. 分別共有買賣(82)
+  '/f/土地分別共有買賣解決方式': '/blog/articles/fenbie-co-ownership-sale-solutions.html',
+  '/首頁/f/土地分別共有買賣解決方式': '/blog/articles/fenbie-co-ownership-sale-solutions.html',
+
+  // 2. 神明名義土地(82)
+  '/f/關於「神明名義土地」的疑難雜症': '/blog/articles/shrine-name-land-issues.html',
+  '/首頁/f/關於「神明名義土地」的疑難雜症': '/blog/articles/shrine-name-land-issues.html',
+  '/f/關於神明名義土地的疑難雜症': '/blog/articles/shrine-name-land-issues.html',
+
+  // 3. 持分土地怎麼賣(81)
+  '/f/持分土地怎麼賣最划算？自售-vs-找投資客的優缺點': '/blog/articles/partial-land-best-selling-strategy.html',
+  '/首頁/f/持分土地怎麼賣最划算？自售-vs-找投資客的優缺點': '/blog/articles/partial-land-best-selling-strategy.html',
+  '/f/持分土地怎麼賣最划算自售vs找投資客的優缺點': '/blog/articles/partial-land-best-selling-strategy.html',
+
+  // 4. 持分土地抵押貸款(81)
+  '/f/持分土地可以抵押貸款嗎？銀行放貸條件解析': '/blog/articles/partial-land-mortgage-loan.html',
+  '/首頁/f/持分土地可以抵押貸款嗎？銀行放貸條件解析': '/blog/articles/partial-land-mortgage-loan.html',
+  '/f/持分土地可以抵押貸款嗎銀行放貸條件解析': '/blog/articles/partial-land-mortgage-loan.html',
+
+  // 5. 人人都能買農地(79)
+  '/f/人人都能買農地，不只是農民的專利': '/blog/articles/anyone-can-buy-farm-land.html',
+  '/首頁/f/人人都能買農地，不只是農民的專利': '/blog/articles/anyone-can-buy-farm-land.html',
+  '/f/人人都能買農地不只是農民的專利': '/blog/articles/anyone-can-buy-farm-land.html',
+
+  // 6. 道路用地公告現值查詢(79)
+  '/f/道路用地公告現值怎麼查？地政專家教你3分鐘搞懂查詢訣竅5大實戰案例': '/blog/articles/road-land-value-lookup-guide.html',
+  '/首頁/f/道路用地公告現值怎麼查？地政專家教你3分鐘搞懂查詢訣竅5大實戰案例': '/blog/articles/road-land-value-lookup-guide.html',
+  '/f/道路用地公告現值怎麼查地政專家教你3分鐘搞懂查詢訣竅5大實戰案例': '/blog/articles/road-land-value-lookup-guide.html',
+
+  // 7. 分管契約(77)
+  '/f/分管契約、分管決定到底是什麼？教你用簡單方式搞懂持分土地的管理': '/blog/articles/partition-agreement-guide.html',
+  '/首頁/f/分管契約、分管決定到底是什麼？教你用簡單方式搞懂持分土地的管理': '/blog/articles/partition-agreement-guide.html',
+  '/f/分管契約分管決定到底是什麼教你用簡單方式搞懂持分土地的管理': '/blog/articles/partition-agreement-guide.html',
+
+  // 8. 買方詐騙新招(77)
+  '/f/買方詐騙新招：假買家、真詐騙，如何識破？': '/blog/articles/fake-buyer-fraud-tactics.html',
+  '/首頁/f/買方詐騙新招：假買家、真詐騙，如何識破？': '/blog/articles/fake-buyer-fraud-tactics.html',
+  '/f/買方詐騙新招假買家真詐騙如何識破': '/blog/articles/fake-buyer-fraud-tactics.html',
+
+  // 9. 土地被查封(73)
+  '/f/土地被查封竟不知情？防範法院拍賣詐騙有撇步': '/blog/articles/land-seizure-fraud-prevention.html',
+  '/首頁/f/土地被查封竟不知情？防範法院拍賣詐騙有撇步': '/blog/articles/land-seizure-fraud-prevention.html',
+  '/f/土地被查封竟不知情防範法院拍賣詐騙有撇步': '/blog/articles/land-seizure-fraud-prevention.html',
+
+  // 10. 道路用地停車場(72)
+  '/f/道路用地可以做停車場嗎？': '/blog/articles/road-land-as-parking-lot.html',
+  '/首頁/f/道路用地可以做停車場嗎？': '/blog/articles/road-land-as-parking-lot.html',
+  '/f/道路用地可以做停車場嗎': '/blog/articles/road-land-as-parking-lot.html',
+
+  // 11. 親戚詐騙(66)
+  '/f/親戚也會騙？揭秘假委託書賣地手法': '/blog/articles/relative-fraud-fake-authorization.html',
+  '/首頁/f/親戚也會騙？揭秘假委託書賣地手法': '/blog/articles/relative-fraud-fake-authorization.html',
+  '/f/親戚也會騙揭秘假委託書賣地手法': '/blog/articles/relative-fraud-fake-authorization.html',
+
+  // 12. 低價收購詐騙(65)
+  '/f/聲稱「低價收購土地」的是詐騙嗎？這樣判斷最安全': '/blog/articles/low-price-offer-fraud-warning.html',
+  '/首頁/f/聲稱「低價收購土地」的是詐騙嗎？這樣判斷最安全': '/blog/articles/low-price-offer-fraud-warning.html',
+  '/f/聲稱低價收購土地的是詐騙嗎這樣判斷最安全': '/blog/articles/low-price-offer-fraud-warning.html',
+
+  // 13. 非都市計畫道路用地(58)
+  '/f/非都市計畫之道路用地': '/blog/articles/non-urban-road-land.html',
+  '/首頁/f/非都市計畫之道路用地': '/blog/articles/non-urban-road-land.html',
+
+  // 14. 繼承農地免遺產稅(56)
+  '/f/繼承農地符合哪些條件可免課遺產稅？': '/blog/articles/inherit-farm-land-estate-tax-exemption.html',
+  '/首頁/f/繼承農地符合哪些條件可免課遺產稅？': '/blog/articles/inherit-farm-land-estate-tax-exemption.html',
+  '/f/繼承農地符合哪些條件可免課遺產稅': '/blog/articles/inherit-farm-land-estate-tax-exemption.html',
+
+  // 15. 地籍清理代為標售(56)
+  '/f/地籍清理代為標售懶人包｜一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
+  '/首頁/f/地籍清理代為標售懶人包｜一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
+  '/f/地籍清理代為標售懶人包一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
 };
 
 // ============================================
