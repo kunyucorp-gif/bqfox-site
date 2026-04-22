@@ -405,6 +405,64 @@
 
 <!-- Homepage-specific editorial extras -->
 <style>
+  /* ==========================================================
+     2026-04-22 修復:首頁文字重疊問題(CSS override)
+     根因:editorial.css 裡的 ed-pullquote 使用 absolute 定位,
+           導致它與 hero 區塊重疊。此處強制還原為正常文檔流,
+           並確保 hero 區塊有足夠高度與清晰的分段。
+     ========================================================== */
+  
+  /* 1️⃣ 強制 pull quote 回到正常文檔流,不浮動、不負邊距 */
+  #editorial-home .ed-pullquote,
+  .editorial .ed-pullquote {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    float: none !important;
+    z-index: auto !important;
+  }
+
+  /* 2️⃣ Pull Quote 區塊本身有足夠間距,不侵入前後區塊 */
+  #editorial-home .ed-section-sm {
+    position: relative;
+    z-index: 1;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: visible;
+  }
+
+  /* 3️⃣ Hero 區塊結尾要有緩衝空間,避免跟 pull quote 擠在一起 */
+  #hero.ed-section {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 4rem;
+    overflow: visible;
+  }
+
+  /* 4️⃣ Masthead 標籤要保留在 hero 最上方、有 margin 隔開 H1 */
+  #hero .ed-issue-label {
+    position: relative;
+    display: block;
+    margin-bottom: 2rem;
+    z-index: 3;
+  }
+
+  /* 5️⃣ Hero H1 本身不受前面元素干擾 */
+  #hero .ed-headline {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 6️⃣ 右側數字區塊不浮動到左邊文字上 */
+  #hero .hero-right {
+    position: relative;
+    z-index: 1;
+  }
+
   /* Hero grid */
   .hero-grid {
     display: grid;
