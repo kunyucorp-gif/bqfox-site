@@ -25,7 +25,8 @@
  *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸)
  *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資)
  *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決)
- *   - Batch 13 (2026-04-23): 8 篇公同共有終極權威(vs分別/變更/繼承/分割訴訟/單獨賣/六都GEO/失聯/稅務) ← 本次更新
+ *   - Batch 13 (2026-04-23): 8 篇公同共有終極權威(vs分別/變更/繼承/分割訴訟/單獨賣/六都GEO/失聯/稅務)
+ *   - Batch 14 (2026-04-23): 8 篇祭祀公業終極權威(派下權/買賣/法人/管理人/糾紛/六都GEO/解散/稅務) ← 本次更新
  */
 
 // ============================================
@@ -569,6 +570,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/公同共有土增稅': '/blog/articles/joint-ownership-tax-complete-calculation.html',
   '/首頁/f/公同共有土增稅': '/blog/articles/joint-ownership-tax-complete-calculation.html',
   '/f/公同共有稅務': '/blog/articles/joint-ownership-tax-complete-calculation.html',
+
+  // ===== Batch 14 祭祀公業終極權威(2026-04-23 新增 8 篇)=====
+  // 1. 派下權完整指南
+  '/f/派下權': '/blog/articles/ancestral-public-member-rights.html',
+  '/首頁/f/派下權': '/blog/articles/ancestral-public-member-rights.html',
+  '/f/祭祀公業派下員': '/blog/articles/ancestral-public-member-rights.html',
+
+  // 2. 祭祀公業土地買賣 SOP
+  '/f/祭祀公業土地買賣': '/blog/articles/ancestral-land-sale-process-2026.html',
+  '/首頁/f/祭祀公業土地買賣': '/blog/articles/ancestral-land-sale-process-2026.html',
+  '/f/派下員大會': '/blog/articles/ancestral-land-sale-process-2026.html',
+
+  // 3. 法人登記流程
+  '/f/祭祀公業法人': '/blog/articles/ancestral-legal-entity-registration.html',
+  '/首頁/f/祭祀公業法人': '/blog/articles/ancestral-legal-entity-registration.html',
+  '/f/祭祀公業登記': '/blog/articles/ancestral-legal-entity-registration.html',
+
+  // 4. 管理人選任與解任
+  '/f/祭祀公業管理人': '/blog/articles/ancestral-manager-elections.html',
+  '/首頁/f/祭祀公業管理人': '/blog/articles/ancestral-manager-elections.html',
+  '/f/管理人選任': '/blog/articles/ancestral-manager-elections.html',
+
+  // 5. 糾紛解決訴訟
+  '/f/祭祀公業糾紛': '/blog/articles/ancestral-dispute-lawsuit-cases.html',
+  '/首頁/f/祭祀公業糾紛': '/blog/articles/ancestral-dispute-lawsuit-cases.html',
+  '/f/確認派下權訴訟': '/blog/articles/ancestral-dispute-lawsuit-cases.html',
+
+  // 6. 六都祭祀公業熱區
+  '/f/六都祭祀公業': '/blog/articles/ancestral-six-cities-market-2026.html',
+  '/首頁/f/六都祭祀公業': '/blog/articles/ancestral-six-cities-market-2026.html',
+  '/f/祭祀公業收購': '/blog/articles/ancestral-six-cities-market-2026.html',
+
+  // 7. 解散與財產分配
+  '/f/祭祀公業解散': '/blog/articles/ancestral-dissolution-distribution.html',
+  '/首頁/f/祭祀公業解散': '/blog/articles/ancestral-dissolution-distribution.html',
+  '/f/祭祀公業分配': '/blog/articles/ancestral-dissolution-distribution.html',
+
+  // 8. 稅務完整指南
+  '/f/祭祀公業土增稅': '/blog/articles/ancestral-tax-complete-guide.html',
+  '/首頁/f/祭祀公業土增稅': '/blog/articles/ancestral-tax-complete-guide.html',
+  '/f/祭祀公業稅務': '/blog/articles/ancestral-tax-complete-guide.html',
 };
 
 // ============================================
