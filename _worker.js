@@ -64,66 +64,87 @@ const EXACT_REDIRECTS = {
 // Phase 1: 根目錄重複 HTML → blog/articles/ 或 pages/
 // （已同時用 meta-refresh 做 HTML fallback；此處為 server-side 301）
 // ============================================
-const LEGACY_FILE_REDIRECTS = {
-  '/co-13.html': '/blog/articles/co-13.html',
-  '/rl-13.html': '/blog/articles/rl-13.html',
-  '/375-08.html': '/blog/articles/375-08.html',
-  '/farm-03.html': '/blog/articles/farm-03.html',
-  '/rl-15.html': '/blog/articles/rl-15.html',
-  '/co-16.html': '/blog/articles/co-16.html',
-  '/re-01.html': '/blog/articles/re-01.html',
-  '/farm-01.html': '/blog/articles/farm-01.html',
-  '/co-07.html': '/blog/articles/co-07.html',
-  '/jo-03.html': '/blog/articles/jo-03.html',
-  '/jo-04.html': '/blog/articles/jo-04.html',
-  '/co-15.html': '/blog/articles/co-15.html',
-  '/co-09.html': '/blog/articles/co-09.html',
-  '/far-02.html': '/blog/articles/far-02.html',
-  '/375-10.html': '/blog/articles/375-10.html',
-  '/co-06.html': '/blog/articles/co-06.html',
-  '/an-06.html': '/blog/articles/an-06.html',
-  '/375-06.html': '/blog/articles/375-06.html',
-  '/jo-05.html': '/blog/articles/jo-05.html',
-  '/far-05.html': '/blog/articles/far-05.html',
-  '/375-09.html': '/blog/articles/375-09.html',
-  '/rl-11.html': '/blog/articles/rl-11.html',
-  '/rl-14.html': '/blog/articles/rl-14.html',
-  '/an-02.html': '/blog/articles/an-02.html',
-  '/co-17.html': '/blog/articles/co-17.html',
-  '/an-10.html': '/blog/articles/an-10.html',
-  '/co-11.html': '/blog/articles/co-11.html',
-  '/an-03.html': '/blog/articles/an-03.html',
-  '/co-12.html': '/blog/articles/co-12.html',
-  '/an-04.html': '/blog/articles/an-04.html',
-  '/an-05.html': '/blog/articles/an-05.html',
-  '/375-04.html': '/blog/articles/375-04.html',
-  '/re-03.html': '/blog/articles/re-03.html',
-  '/inh-01.html': '/blog/articles/inh-01.html',
-  '/inh-03.html': '/blog/articles/inh-03.html',
-  '/jo-01.html': '/blog/articles/jo-01.html',
-  '/co-14.html': '/blog/articles/co-14.html',
-  '/an-09.html': '/blog/articles/an-09.html',
-  '/far-01.html': '/blog/articles/far-01.html',
-  '/re-02.html': '/blog/articles/re-02.html',
-  '/inh-04.html': '/blog/articles/inh-04.html',
-  '/375-07.html': '/blog/articles/375-07.html',
-  '/farm-02.html': '/blog/articles/farm-02.html',
-  '/an-08.html': '/blog/articles/an-08.html',
-  '/rl-09.html': '/blog/articles/rl-09.html',
-  '/inh-05.html': '/blog/articles/inh-05.html',
-  '/rl-10.html': '/blog/articles/rl-10.html',
-  '/co-08.html': '/blog/articles/co-08.html',
-  '/co-10.html': '/blog/articles/co-10.html',
-  '/farm-04.html': '/blog/articles/farm-04.html',
-  '/jo-02.html': '/blog/articles/jo-02.html',
-  '/inh-06.html': '/blog/articles/inh-06.html',
-  '/farm-05.html': '/blog/articles/farm-05.html',
-  '/375-05.html': '/blog/articles/375-05.html',
-  '/375-overview.html': '/blog/',
-  '/road-land.html': '/',
+const LEGACY_FILE_REDIRECTS = LEGACY_FILE_REDIRECTS = {
+  // ══════════════════════════════════════════════════════════════
+  // 救流量轉址(Phase 0-1 舊 URL → 143 篇真實文章)
+  // 2026-04-23 重新映射,避免 Google 404
+  // ══════════════════════════════════════════════════════════════
+
+  // ─── 三七五租約 ───
+  '/375-04.html': '/blog/articles/375-rent-reduction-easy-guide.html',
+  '/375-05.html': '/blog/articles/375-tenancy-dispute-guide.html',
+  '/375-06.html': '/blog/articles/is-375-rent-reduction-abolished.html',
+  '/375-07.html': '/blog/articles/terminate-375-tenancy-complete-process.html',
+  '/375-08.html': '/blog/articles/land-reform-compensation-calculation.html',
+  '/375-09.html': '/blog/articles/375-tenant-rights-complete-guide.html',
+  '/375-10.html': '/blog/articles/375-latest-judgments-2026.html',
+  '/375-overview.html': '/blog/articles/375-constitutional-interpretation.html',
+
+  // ─── 祭祀公業 ───
+  '/an-01.html': '/blog/articles/ancestral-land-complete-manual.html',
+  '/an-02.html': '/blog/articles/ancestral-land-auction-guide.html',
+  '/an-03.html': '/blog/articles/ancestral-land-shrine-guide.html',
+  '/an-04.html': '/blog/articles/shrine-name-land-issues.html',
+  '/an-05.html': '/blog/articles/ancestral-public-member-rights.html',
+  '/an-06.html': '/blog/articles/ancestral-land-sale-process-2026.html',
+  '/an-07.html': '/blog/articles/ancestral-legal-entity-registration.html',
+  '/an-08.html': '/blog/articles/ancestral-manager-elections.html',
+  '/an-09.html': '/blog/articles/ancestral-dispute-lawsuit-cases.html',
+  '/an-10.html': '/blog/articles/ancestral-six-cities-market-2026.html',
+
+  // ─── 持分土地 ───
+  '/co-06.html': '/blog/articles/co-ownership-partition-guide.html',
+  '/co-07.html': '/blog/articles/co-ownership-inheritance.html',
+  '/co-08.html': '/blog/articles/co-ownership-forced-partition.html',
+  '/co-09.html': '/blog/articles/fenbie-co-ownership-sale-solutions.html',
+  '/co-10.html': '/blog/articles/partial-land-sale-complete-guide.html',
+  '/co-11.html': '/blog/articles/partial-land-hard-to-sell-solutions.html',
+  '/co-12.html': '/blog/articles/partial-land-mortgage-loan.html',
+  '/co-13.html': '/blog/articles/partial-land-priority-right-execution.html',
+  '/co-14.html': '/blog/articles/partial-land-tax-complete-calculation.html',
+  '/co-15.html': '/blog/articles/partial-land-occupied-lawsuit-sop.html',
+  '/co-16.html': '/blog/articles/partial-land-court-auction-guide.html',
+  '/co-17.html': '/blog/articles/partial-land-scam-7-patterns-alert.html',
+
+  // ─── 重劃地 ───
+  '/re-01.html': '/blog/articles/rezoning-land-complete-buyers-guide.html',
+  '/re-02.html': '/blog/articles/rezoning-land-price-calculation-formula.html',
+  '/re-03.html': '/blog/articles/rezoning-land-holder-rights-process.html',
+  '/rl-09.html': '/blog/articles/rezoning-land-complete-buyers-guide.html',
+  '/rl-10.html': '/blog/articles/rezoning-land-vs-section-expropriation.html',
+  '/rl-11.html': '/blog/articles/rezoning-land-price-calculation-formula.html',
+  '/rl-12.html': '/blog/articles/rezoning-land-holder-rights-process.html',
+  '/rl-13.html': '/blog/articles/section-expropriation-compensation-fight.html',
+  '/rl-14.html': '/blog/articles/counter-value-land-tax-tricks.html',
+  '/rl-15.html': '/blog/articles/rezoning-land-investment-risk-analysis.html',
+
+  // ─── 公同共有 ───
+  '/jo-01.html': '/blog/articles/joint-ownership-vs-tenancy-in-common.html',
+  '/jo-02.html': '/blog/articles/joint-ownership-to-separate-conversion.html',
+  '/jo-03.html': '/blog/articles/joint-ownership-inheritance-complete-guide.html',
+  '/jo-04.html': '/blog/articles/joint-ownership-partition-lawsuit.html',
+  '/jo-05.html': '/blog/articles/joint-ownership-land-sale-guide.html',
+
+  // ─── 農地 ───
+  '/far-01.html': '/blog/articles/inherit-farm-land-tax-guide.html',
+  '/far-02.html': '/blog/articles/inherit-farm-land-estate-tax-exemption.html',
+  '/far-03.html': '/blog/articles/agricultural-land-tax-exemption.html',
+  '/far-05.html': '/blog/articles/partial-farm-land-sale-guide.html',
+  '/farm-01.html': '/blog/articles/anyone-can-buy-farm-land.html',
+  '/farm-02.html': '/blog/articles/gift-farm-land-to-children.html',
+  '/farm-03.html': '/blog/articles/partial-farm-land-sale-guide.html',
+  '/farm-04.html': '/blog/articles/farm-land-annex-release-guide.html',
+  '/farm-05.html': '/blog/articles/agricultural-land-tax-exemption.html',
+
+  // ─── 繼承 ───
+  '/inh-01.html': '/blog/articles/inheritance-order-complete-2026.html',
+  '/inh-03.html': '/blog/articles/inheritance-tax-calculation-2026.html',
+  '/inh-04.html': '/blog/articles/inheritance-land-registration-sop.html',
+  '/inh-05.html': '/blog/articles/inheritance-renunciation-limited-comparison.html',
+  '/inh-06.html': '/blog/articles/inheritance-tax-savings-strategies.html',
+
+  // ─── 其他舊 URL ───
   '/what-is-road-land.html': '/pages/road-land.html',
-  '/rl-12.html': '/blog/articles/rl-12.html',
-  '/an-07.html': '/blog/articles/an-07.html',
 };
 
 // ============================================
