@@ -21,7 +21,8 @@
  *   - Phase 7 Batch 6 (2026-04-22): 8 篇容積移轉進攻型主題群文章
  *   - Phase 7 Batch 7 (2026-04-22): 8 篇道路用地進攻型主題群文章(GEO 強化)
  *   - Phase 7 Batch 8 (2026-04-22): 8 篇公共設施保留地主題群文章(GEO + 多元分類)
- *   - Phase 7 Batch 9 (2026-04-22): 8 篇持分土地終極戰場(56,429 曝光/月) ← 本次更新
+ *   - Phase 7 Batch 9 (2026-04-22): 8 篇持分土地終極戰場(56,429 曝光/月)
+ *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸) ← 本次更新
  */
 
 // ============================================
@@ -401,6 +402,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/地籍清理代為標售懶人包｜一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
   '/首頁/f/地籍清理代為標售懶人包｜一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
   '/f/地籍清理代為標售懶人包一次搞懂政府幫你賣土地的流程': '/blog/articles/cadastral-cleanup-auction-guide.html',
+
+  // ===== Batch 10 持分土地深度型(2026-04-23 新增 8 篇)=====
+  // 1. 持分土地稅務完整試算
+  '/f/持分土地賣掉要繳多少稅': '/blog/articles/partial-land-tax-complete-calculation.html',
+  '/首頁/f/持分土地賣掉要繳多少稅': '/blog/articles/partial-land-tax-complete-calculation.html',
+  '/f/持分土地稅怎麼算': '/blog/articles/partial-land-tax-complete-calculation.html',
+
+  // 2. 共有人失聯 4 解方
+  '/f/共有人失聯怎麼辦': '/blog/articles/partial-land-disappeared-owner-solutions.html',
+  '/首頁/f/共有人失聯怎麼辦': '/blog/articles/partial-land-disappeared-owner-solutions.html',
+  '/f/持分土地共有人找不到': '/blog/articles/partial-land-disappeared-owner-solutions.html',
+
+  // 3. 雙北 GEO 行情
+  '/f/雙北持分土地行情': '/blog/articles/partial-land-taipei-newtaipei-market-2026.html',
+  '/首頁/f/雙北持分土地行情': '/blog/articles/partial-land-taipei-newtaipei-market-2026.html',
+  '/f/台北持分土地價格': '/blog/articles/partial-land-taipei-newtaipei-market-2026.html',
+
+  // 4. 土地被占用訴訟
+  '/f/持分土地被占用怎麼辦': '/blog/articles/partial-land-occupied-lawsuit-sop.html',
+  '/首頁/f/持分土地被占用怎麼辦': '/blog/articles/partial-land-occupied-lawsuit-sop.html',
+  '/f/土地被占用訴訟': '/blog/articles/partial-land-occupied-lawsuit-sop.html',
+
+  // 5. 法院拍賣完整指南
+  '/f/持分土地法院拍賣': '/blog/articles/partial-land-court-auction-guide.html',
+  '/首頁/f/持分土地法院拍賣': '/blog/articles/partial-land-court-auction-guide.html',
+  '/f/持分土地法拍': '/blog/articles/partial-land-court-auction-guide.html',
+
+  // 6. 詐騙 7 大手法
+  '/f/持分土地詐騙': '/blog/articles/partial-land-scam-7-patterns-alert.html',
+  '/首頁/f/持分土地詐騙': '/blog/articles/partial-land-scam-7-patterns-alert.html',
+  '/f/土地買賣詐騙手法': '/blog/articles/partial-land-scam-7-patterns-alert.html',
+
+  // 7. 優先購買權 15 天時效
+  '/f/優先購買權時效': '/blog/articles/partial-land-priority-right-timeline-expiry.html',
+  '/首頁/f/優先購買權時效': '/blog/articles/partial-land-priority-right-timeline-expiry.html',
+  '/f/優先購買權15天': '/blog/articles/partial-land-priority-right-timeline-expiry.html',
+
+  // 8. 兩岸三地繼承持分
+  '/f/兩岸繼承持分土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
+  '/首頁/f/兩岸繼承持分土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
+  '/f/陸配繼承台灣土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
 };
 
 // ============================================
