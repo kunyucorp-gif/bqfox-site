@@ -27,7 +27,8 @@
  *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決)
  *   - Batch 13 (2026-04-23): 8 篇公同共有終極權威(vs分別/變更/繼承/分割訴訟/單獨賣/六都GEO/失聯/稅務)
  *   - Batch 14 (2026-04-23): 8 篇祭祀公業終極權威(派下權/買賣/法人/管理人/糾紛/六都GEO/解散/稅務)
- *   - Batch 15 (2026-04-23): 8 篇地政繼承權威(順位/遺產稅/登記SOP/拋棄限定/節稅/配偶/73-1救援/六都GEO) ← 本次更新
+ *   - Batch 15 (2026-04-23): 8 篇地政繼承權威(順位/遺產稅/登記SOP/拋棄限定/節稅/配偶/73-1救援/六都GEO)
+ *   - Batch 16 (2026-04-23): 8 篇土地節稅權威(土增稅/房地合一2.0/地價稅/重購退稅/農地免徵/共有節稅/長期持有/六都比拼) ← 本次更新
  */
 
 // ============================================
@@ -653,6 +654,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/六都繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
   '/首頁/f/六都繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
   '/f/代位繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
+
+  // ===== Batch 16 土地節稅權威(2026-04-23 新增 8 篇)=====
+  // 1. 土地增值稅完整指南
+  '/f/土地增值稅': '/blog/articles/land-value-tax-2026-complete-guide.html',
+  '/首頁/f/土地增值稅': '/blog/articles/land-value-tax-2026-complete-guide.html',
+  '/f/一生一次': '/blog/articles/land-value-tax-2026-complete-guide.html',
+
+  // 2. 房地合一稅 2.0
+  '/f/房地合一稅': '/blog/articles/house-land-unified-tax-2026.html',
+  '/首頁/f/房地合一稅': '/blog/articles/house-land-unified-tax-2026.html',
+  '/f/自住400萬': '/blog/articles/house-land-unified-tax-2026.html',
+
+  // 3. 地價稅+房屋稅
+  '/f/地價稅': '/blog/articles/land-value-tax-holding-annual.html',
+  '/首頁/f/地價稅': '/blog/articles/land-value-tax-holding-annual.html',
+  '/f/房屋稅': '/blog/articles/land-value-tax-holding-annual.html',
+
+  // 4. 重購退稅
+  '/f/重購退稅': '/blog/articles/repurchase-tax-refund-complete.html',
+  '/首頁/f/重購退稅': '/blog/articles/repurchase-tax-refund-complete.html',
+  '/f/換屋退稅': '/blog/articles/repurchase-tax-refund-complete.html',
+
+  // 5. 農地免徵
+  '/f/農地免徵': '/blog/articles/agricultural-land-tax-exemption.html',
+  '/首頁/f/農地免徵': '/blog/articles/agricultural-land-tax-exemption.html',
+  '/f/農業使用證明': '/blog/articles/agricultural-land-tax-exemption.html',
+
+  // 6. 共有土地節稅
+  '/f/共有土地稅': '/blog/articles/co-owned-land-tax-strategies.html',
+  '/首頁/f/共有土地稅': '/blog/articles/co-owned-land-tax-strategies.html',
+  '/f/共有物分割不課徵': '/blog/articles/co-owned-land-tax-strategies.html',
+
+  // 7. 長期持有減徵
+  '/f/長期持有減徵': '/blog/articles/land-long-term-holding-reduction.html',
+  '/首頁/f/長期持有減徵': '/blog/articles/land-long-term-holding-reduction.html',
+  '/f/40年減徵': '/blog/articles/land-long-term-holding-reduction.html',
+
+  // 8. 六都土地稅比拼
+  '/f/六都土地稅': '/blog/articles/land-tax-six-cities-comparison.html',
+  '/首頁/f/六都土地稅': '/blog/articles/land-tax-six-cities-comparison.html',
+  '/f/公告現值比較': '/blog/articles/land-tax-six-cities-comparison.html',
 };
 
 // ============================================
