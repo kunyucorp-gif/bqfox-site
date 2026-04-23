@@ -7,6 +7,10 @@
 <meta name="keywords" content="道路用地買賣,既成道路,計畫道路,公設保留地,道路用地收購">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.bqfox.com/pages/road-land.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" href="../assets/style.css">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://www.bqfox.com/#org", "name": "寶璣建設有限公司", "url": "https://www.bqfox.com", "telephone": "02-2274-6789", "address": {"@type": "PostalAddress", "streetAddress": "南雅南路二段144巷73號", "addressLocality": "板橋區", "addressRegion": "新北市", "addressCountry": "TW"}}</script>
@@ -305,6 +309,357 @@ body {
 }
 
 </style>
+
+
+<style>/* 2026-04-22 Mobile Typography & Color Fix */
+
+/* === 手機版全域字體放大 === */
+@media (max-width: 900px) {
+  /* 身體字體放大 */
+  html { font-size: 16px !important; }
+  body { font-size: 17px !important; line-height: 1.75 !important; }
+  
+  /* 標題加大 */
+  h1 { font-size: 1.85rem !important; line-height: 1.3 !important; }
+  h2 { font-size: 1.5rem !important; line-height: 1.35 !important; }
+  h3 { font-size: 1.2rem !important; line-height: 1.4 !important; }
+  h4 { font-size: 1.05rem !important; }
+  
+  /* 段落字體 */
+  p { font-size: 1rem !important; line-height: 1.85 !important; }
+  li { font-size: 1rem !important; }
+  
+  /* 服務頁內容字體 */
+  .page-section p { font-size: 1rem !important; }
+  .feature-card p { font-size: 0.95rem !important; }
+  .process-step p { font-size: 0.95rem !important; }
+  .faq-item p { font-size: 0.98rem !important; }
+}
+
+@media (max-width: 500px) {
+  html { font-size: 15px !important; }
+}
+
+/* === Nav 手機版黑底白字強制 === */
+@media (max-width: 900px) {
+  /* Menu overlay 背景純黑 */
+  .nav .nav-menu,
+  .nav .nav-menu.open {
+    background: #0a0a0a !important;
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s ease !important;
+    border-bottom: 1px solid #2a2824 !important;
+    z-index: 9998 !important;
+  }
+  
+  .nav .nav-menu { max-height: 0 !important; }
+  .nav .nav-menu.open {
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+  }
+  
+  /* 每個 item 邊框分隔 */
+  .nav .nav-menu .nav-item {
+    width: 100% !important;
+    display: block !important;
+    border-bottom: 1px solid #2a2824 !important;
+    background: #0a0a0a !important;
+  }
+  
+  /* ⭐ 關鍵修復:nav-link 強制白字!important */
+  .nav .nav-menu .nav-item .nav-link,
+  .nav .nav-menu .nav-item > a,
+  .nav .nav-menu a.nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 1.3rem 1.5rem !important;
+    color: #f5f2ec !important;              /* ← 白字 */
+    background: #0a0a0a !important;          /* ← 黑底 */
+    text-decoration: none !important;
+    font-size: 1.05rem !important;           /* ← 字體放大 */
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+  }
+  
+  .nav .nav-menu .nav-link:hover,
+  .nav .nav-menu .nav-link:active {
+    background: #1a1a1a !important;
+    color: #c9a24d !important;
+  }
+  
+  /* Dropdown 攤平顯示 */
+  .nav .nav-dd {
+    position: static !important;
+    padding-top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    background: #141414 !important;
+    display: block !important;
+  }
+  
+  /* ⭐ Dropdown 裡的連結文字 */
+  .nav .nav-dd > a,
+  .nav .nav-dd a[role="menuitem"] {
+    display: block !important;
+    padding: 1rem 1rem 1rem 2.5rem !important;
+    color: #d4c9b3 !important;               /* ← 稍淺的白色 */
+    background: #141414 !important;
+    text-decoration: none !important;
+    font-size: 0.98rem !important;
+    border-bottom: 1px solid #2a2824 !important;
+    border-top: none !important;
+  }
+  
+  .nav .nav-dd > a:first-child {
+    border-top: 2px solid #c9a24d !important;
+  }
+  
+  .nav .nav-dd > a:hover,
+  .nav .nav-dd > a:active {
+    background: #0a0a0a !important;
+    color: #c9a24d !important;
+  }
+  
+  /* Chevron icon 顯示 */
+  .nav .ic-chevron {
+    stroke: #c9a24d !important;
+    margin-left: 8px !important;
+  }
+  
+  /* Hamburger 保持顯示 */
+  .nav .hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+    position: relative !important;
+  }
+  
+  .nav .hamburger span {
+    display: block !important;
+    width: 26px !important;
+    height: 2px !important;
+    background: #f5f2ec !important;
+    transition: all 0.3s !important;
+    margin: 0 !important;
+  }
+  
+  .nav .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+  .nav .hamburger.open span:nth-child(2) { opacity: 0 !important; }
+  .nav .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+  
+  /* Nav 主體 */
+  .nav {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .nav .nav-tel { display: none !important; }
+  .nav .nav-logo-text small { display: none !important; }
+  .nav .nav-logo-text strong {
+    font-size: 1rem !important;
+  }
+  .nav .nav-line-btn {
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav .hamburger { display: none !important; }
+}
+
+</style>
+
+<style id="bq-mobile-fix-r2">
+/* ════════════════════════════════════════════════════════════
+   Q3 · 手機板 nav 選單黑底黑字修復(2026-04-23)
+   處理「營業項目」下拉選單在手機顯示黑底黑字問題
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* 頂層選單項目字顏色強制金白色 */
+  .nav .nav-menu .nav-item .nav-link,
+  .nav .nav-menu .nav-item > a,
+  .nav .nav-menu a.nav-link,
+  .nav .nav-menu .nav-link,
+  nav.nav ul li a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+  }
+  
+  /* 下拉選單容器 — 深色半透明背景 */
+  .nav .nav-menu .nav-item .nav-submenu,
+  .nav .nav-menu .nav-dd-menu,
+  .nav-submenu,
+  .nav-dd-menu,
+  ul.nav-submenu,
+  ul.nav-dd-menu {
+    background: #141414 !important;
+    border: 1px solid rgba(201, 162, 77, 0.25) !important;
+    border-radius: 3px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  /* 下拉選單內的項目 — 金白色字,透明背景 */
+  .nav .nav-menu .nav-submenu li a,
+  .nav .nav-menu .nav-dd-menu li a,
+  .nav-submenu li a,
+  .nav-dd-menu li a,
+  .nav-submenu a,
+  .nav-dd-menu a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+    padding: 0.85rem 1.4rem !important;
+    display: block !important;
+    font-size: 1.05rem !important;
+    border-bottom: 1px solid rgba(201, 162, 77, 0.1) !important;
+    text-decoration: none !important;
+  }
+  
+  .nav-submenu li a:hover,
+  .nav-dd-menu li a:hover,
+  .nav-submenu li a:active,
+  .nav-dd-menu li a:active {
+    color: #c9a24d !important;
+    background: rgba(201, 162, 77, 0.08) !important;
+  }
+  
+  .nav-submenu li:last-child a,
+  .nav-dd-menu li:last-child a {
+    border-bottom: none !important;
+  }
+  
+  /* 手機版打開後整個 nav-menu 的背景 */
+  .nav .nav-menu.is-open,
+  .nav-menu.is-open,
+  .nav-menu.show {
+    background: #0a0a0a !important;
+    color: #f5f2ec !important;
+  }
+  
+  .nav .nav-menu.is-open li,
+  .nav-menu.is-open .nav-item,
+  .nav-menu.show .nav-item {
+    background: transparent !important;
+  }
+  
+  .nav .nav-menu.is-open li a,
+  .nav-menu.is-open .nav-item a,
+  .nav-menu.show .nav-item a {
+    color: #f5f2ec !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   Q4 · 手機板全站文字放大(不依賴瀏覽器縮放)
+   2026-04-23
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  html { font-size: 17px !important; }
+  body {
+    font-size: 18px !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 標題層級調大 */
+  h1 { font-size: 2.1rem !important; line-height: 1.35 !important; }
+  h2 { font-size: 1.75rem !important; line-height: 1.4 !important; }
+  h3 { font-size: 1.4rem !important; line-height: 1.45 !important; }
+  h4 { font-size: 1.2rem !important; line-height: 1.5 !important; }
+  
+  p,
+  li,
+  td,
+  span:not(.nav-tel):not(.ic-phone):not(.num),
+  a:not(.bqv4-btn):not(.nav-tel):not(.nav-line):not(.bq-xlink-btn) {
+    font-size: 1.08rem !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 文章內 blog 區字再放大 */
+  .bq-cat-card h2 { font-size: 1.6rem !important; }
+  .bq-cat-card p,
+  .bq-cat-articles a,
+  .bq-cat-desc { font-size: 1.05rem !important; line-height: 1.7 !important; }
+  
+  /* 首頁 hero 保持原樣(避免擠壓) */
+  .bqv4-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem) !important; }
+  
+  /* 知識專區卡片 */
+  .bqv4-knowledge-card h3 { font-size: 1.4rem !important; }
+  .bqv4-knowledge-card p { font-size: 1.02rem !important; line-height: 1.75 !important; }
+  .bqv4-knowledge-card .num { font-size: 3rem !important; }
+  
+  /* 服務卡片 */
+  .bqv4-service-card h3 { font-size: 1.5rem !important; }
+  .bqv4-service-card p { font-size: 1.05rem !important; line-height: 1.8 !important; }
+  
+  /* 表單欄位字體 */
+  .bqv4-contact-form input,
+  .bqv4-contact-form select,
+  .bqv4-contact-form textarea {
+    font-size: 1.05rem !important;
+  }
+  .bqv4-form-title { font-size: 1.5rem !important; }
+  .bqv4-form-sub { font-size: 1rem !important; }
+  .bqv4-form-label { font-size: 0.98rem !important; }
+  
+  /* 按鈕字 */
+  .bqv4-btn { font-size: 1.02rem !important; padding: 1rem 2rem !important; }
+  
+  /* Footer 字加大 */
+  footer,
+  footer p,
+  footer span,
+  footer div { font-size: 0.95rem !important; line-height: 1.8 !important; }
+  
+  /* 統計 card */
+  .bqv4-stat-num { font-size: 3rem !important; }
+  .bqv4-stat-num sup { font-size: 1.3rem !important; }
+  .bqv4-stat-label { font-size: 0.9rem !important; }
+  
+  /* Pull quote */
+  .bqv4-pullquote,
+  blockquote { font-size: 1.25rem !important; line-height: 1.8 !important; }
+  
+  /* FAQ */
+  .bqv4-faq-q { font-size: 1.15rem !important; }
+  .bqv4-faq-a { font-size: 1.02rem !important; line-height: 1.85 !important; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 16.5px !important; }
+  body { font-size: 17.5px !important; }
+  h1 { font-size: 1.95rem !important; }
+  h2 { font-size: 1.65rem !important; }
+  h3 { font-size: 1.32rem !important; }
+  p, li, td { font-size: 1.05rem !important; line-height: 1.85 !important; }
+}
+
+
+</style>
 </head>
 <body>
 <nav class="nav" id="nav" role="navigation" aria-label="主要導覽">
@@ -450,36 +805,96 @@ body {
         深入了解 <em style="font-style:normal;color:#c9a24d;">道路用地・公保地</em>
       </h2>
       <p style="color:#a8a29a;font-size:1rem;line-height:1.85;max-width:620px;margin:0 auto;font-weight:300;">
-        由律師與地政士親撰的 30 篇專業文章,從法律依據到六都實戰案例完整解析。
+        由律師與地政士親撰的 29 篇專業文章,從法律依據到六都實戰案例完整解析。
       </p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid #2a2824;border-left:1px solid #2a2824;">
-    <a href="/blog/articles/road-land-can-build-house.html" class="bq-related-article">
-      <h4>道路用地可以蓋房子嗎？公共設施保留地 5 大迷思一次破解</h4>
-    </a>
-    <a href="/blog/articles/road-land-fencing-rules.html" class="bq-related-article">
-      <h4>道路用地可以圍起來嗎？圍籬、鐵皮、花盆 5 分鐘看懂法律界線</h4>
-    </a>
-    <a href="/blog/articles/road-types-distinction.html" class="bq-related-article">
-      <h4>馬路學問大！3 分鐘看懂「私設、既成、計畫道路」差在哪裡</h4>
-    </a>
     <a href="/blog/articles/build-near-unopened-planned-road.html" class="bq-related-article">
       <h4>建地臨接「未開闢都市計畫道路」可申請興建嗎？實務判斷 4 關鍵</h4>
     </a>
-    <a href="/blog/articles/road-land-public-value-guide.html" class="bq-related-article">
-      <h4>道路用地公告現值全攻略｜看懂政府估價眉角,避免吃虧的 7 大重點</h4>
+    <a href="/blog/articles/existing-road-landowner-rights.html" class="bq-related-article">
+      <h4>既成道路地主權利全解析</h4>
+    </a>
+    <a href="/blog/articles/existing-road-sale-price-guide.html" class="bq-related-article">
+      <h4>既成道路買賣價格</h4>
+    </a>
+    <a href="/blog/articles/government-facility-land-guide.html" class="bq-related-article">
+      <h4>機關用地買賣、解編完整攻略</h4>
+    </a>
+    <a href="/blog/articles/green-belt-land-complete-guide.html" class="bq-related-article">
+      <h4>綠地用地完整指南</h4>
+    </a>
+    <a href="/blog/articles/non-urban-road-land.html" class="bq-related-article">
+      <h4>非都市計畫之道路用地</h4>
+    </a>
+    <a href="/blog/articles/plaza-school-park-land-sale.html" class="bq-related-article">
+      <h4>廣場、兒童遊樂場、學校、公園用地買賣完整指南</h4>
     </a>
     <a href="/blog/articles/public-facility-reserved-land-complete-guide.html" class="bq-related-article">
-      <h4>公共設施保留地完全攻略:從定義到活用一次看懂</h4>
+      <h4>公共設施保留地完全攻略</h4>
     </a>
-    <a href="/blog/articles/road-land-tax-offset-guide.html" class="bq-related-article">
-      <h4>道路用地抵稅終極攻略:從法條解析到實戰操作的 7 大關鍵指南</h4>
+    <a href="/blog/articles/public-facility-reserved-land-guide.html" class="bq-related-article">
+      <h4>公共設施保留地完整指南</h4>
+    </a>
+    <a href="/blog/articles/public-reserved-land-by-city.html" class="bq-related-article">
+      <h4>六都公保地完整分析</h4>
+    </a>
+    <a href="/blog/articles/public-reserved-land-price-market.html" class="bq-related-article">
+      <h4>公共設施保留地買賣行情</h4>
+    </a>
+    <a href="/blog/articles/public-reserved-land-purchase-guide.html" class="bq-related-article">
+      <h4>公設保留地/道路用地收購完整指南</h4>
+    </a>
+    <a href="/blog/articles/public-reserved-land-removal-solutions.html" class="bq-related-article">
+      <h4>公共設施保留地解編、解套完整攻略</h4>
     </a>
     <a href="/blog/articles/reserved-vs-used-public-facility-land.html" class="bq-related-article">
       <h4>【超圖解】買地前必看！公共設施保留地 vs 公共設施用地,搞懂這 3 大差異才不會吃虧</h4>
     </a>
+    <a href="/blog/articles/road-land-as-parking-lot.html" class="bq-related-article">
+      <h4>道路用地可以做停車場嗎？合法條件、租金行情與實務操作解析</h4>
+    </a>
+    <a href="/blog/articles/road-land-can-build-house.html" class="bq-related-article">
+      <h4>道路用地可以蓋房子嗎？公共設施保留地 5 大迷思一次破解</h4>
+    </a>
+    <a href="/blog/articles/road-land-complete-sale-guide.html" class="bq-related-article">
+      <h4>道路用地買賣完整指南</h4>
+    </a>
+    <a href="/blog/articles/road-land-deed-allocation-guide.html" class="bq-related-article">
+      <h4>道路用地權狀、分配、合法性完整指南</h4>
+    </a>
+    <a href="/blog/articles/road-land-fencing-rules.html" class="bq-related-article">
+      <h4>道路用地可以圍起來嗎？圍籬、鐵皮、花盆 5 分鐘看懂法律界線</h4>
+    </a>
+    <a href="/blog/articles/road-land-price-complete.html" class="bq-related-article">
+      <h4>道路用地價格怎麼算?2026 六都行情、計算公式、影響價格 7 大因素</h4>
+    </a>
+    <a href="/blog/articles/road-land-public-value-guide.html" class="bq-related-article">
+      <h4>道路用地公告現值全攻略</h4>
+    </a>
+    <a href="/blog/articles/road-land-sale-fraud-risks.html" class="bq-related-article">
+      <h4>道路用地詐騙大揭密</h4>
+    </a>
+    <a href="/blog/articles/road-land-tax-offset-guide.html" class="bq-related-article">
+      <h4>道路用地抵稅終極攻略</h4>
+    </a>
+    <a href="/blog/articles/road-land-value-lookup-guide.html" class="bq-related-article">
+      <h4>道路用地公告現值怎麼查？地政專家教你 3 分鐘搞懂查詢訣竅與 5 大實戰案例</h4>
+    </a>
+    <a href="/blog/articles/road-types-distinction.html" class="bq-related-article">
+      <h4>馬路學問大！3 分鐘看懂「私設、既成、計畫道路」差在哪裡</h4>
+    </a>
+    <a href="/blog/articles/statutory-open-space.html" class="bq-related-article">
+      <h4>認識法定空地</h4>
+    </a>
+    <a href="/blog/articles/unacquired-road-land-solutions.html" class="bq-related-article">
+      <h4>未徵收道路用地該怎麼辦？3 大合法解法教你自保、變現、維權</h4>
+    </a>
     <a href="/blog/articles/urban-green-land-guide.html" class="bq-related-article">
       <h4>都市計畫綠地是什麼？完整解析綠地土地使用限制、可用範圍與違規風險</h4>
+    </a>
+    <a href="/blog/articles/what-is-road-land-complete.html" class="bq-related-article">
+      <h4>道路用地是什麼？能幹嘛？使用限制全解析(台北/新北/桃中南高實用指南)</h4>
     </a>
     </div>
     <div style="text-align:center;margin-top:3rem;">
@@ -585,6 +1000,41 @@ body {
     else nav.classList.remove('scrolled');
   });
 })();
+</script>
+
+
+<script>
+// 2026-04-22 Final Hamburger Fix — 強制最後執行,覆蓋 main.js
+window.addEventListener('load', function() {
+  var btn = document.getElementById('hbtn');
+  var menu = document.querySelector('.nav .nav-menu');
+  if (!btn || !menu) { console.log('hamburger elements not found'); return; }
+  
+  // 清空 button 舊的 onclick(如果有)
+  btn.onclick = null;
+  
+  // 直接用 onclick 屬性(覆蓋所有 addEventListener)
+  btn.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    console.log('hamburger clicked, open=' + isOpen);
+    return false;
+  };
+  
+  // 點選單項後關閉
+  var links = menu.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+    });
+  }
+  
+  console.log('hamburger bound successfully');
+});
 </script>
 
 </body>

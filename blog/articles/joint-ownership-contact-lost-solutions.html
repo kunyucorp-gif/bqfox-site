@@ -233,6 +233,178 @@ article p{margin:0 0 20px}
 <link rel="alternate" hreflang="zh-TW" href="https://www.bqfox.com/blog/articles/joint-ownership-contact-lost-solutions.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://www.bqfox.com/blog/articles/joint-ownership-contact-lost-solutions.html">
 <link rel="alternate" hreflang="x-default" href="https://www.bqfox.com/blog/articles/joint-ownership-contact-lost-solutions.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<style id="bq-mobile-fix-r2">
+/* ════════════════════════════════════════════════════════════
+   Q3 · 手機板 nav 選單黑底黑字修復(2026-04-23)
+   處理「營業項目」下拉選單在手機顯示黑底黑字問題
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* 頂層選單項目字顏色強制金白色 */
+  .nav .nav-menu .nav-item .nav-link,
+  .nav .nav-menu .nav-item > a,
+  .nav .nav-menu a.nav-link,
+  .nav .nav-menu .nav-link,
+  nav.nav ul li a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+  }
+  
+  /* 下拉選單容器 — 深色半透明背景 */
+  .nav .nav-menu .nav-item .nav-submenu,
+  .nav .nav-menu .nav-dd-menu,
+  .nav-submenu,
+  .nav-dd-menu,
+  ul.nav-submenu,
+  ul.nav-dd-menu {
+    background: #141414 !important;
+    border: 1px solid rgba(201, 162, 77, 0.25) !important;
+    border-radius: 3px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  /* 下拉選單內的項目 — 金白色字,透明背景 */
+  .nav .nav-menu .nav-submenu li a,
+  .nav .nav-menu .nav-dd-menu li a,
+  .nav-submenu li a,
+  .nav-dd-menu li a,
+  .nav-submenu a,
+  .nav-dd-menu a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+    padding: 0.85rem 1.4rem !important;
+    display: block !important;
+    font-size: 1.05rem !important;
+    border-bottom: 1px solid rgba(201, 162, 77, 0.1) !important;
+    text-decoration: none !important;
+  }
+  
+  .nav-submenu li a:hover,
+  .nav-dd-menu li a:hover,
+  .nav-submenu li a:active,
+  .nav-dd-menu li a:active {
+    color: #c9a24d !important;
+    background: rgba(201, 162, 77, 0.08) !important;
+  }
+  
+  .nav-submenu li:last-child a,
+  .nav-dd-menu li:last-child a {
+    border-bottom: none !important;
+  }
+  
+  /* 手機版打開後整個 nav-menu 的背景 */
+  .nav .nav-menu.is-open,
+  .nav-menu.is-open,
+  .nav-menu.show {
+    background: #0a0a0a !important;
+    color: #f5f2ec !important;
+  }
+  
+  .nav .nav-menu.is-open li,
+  .nav-menu.is-open .nav-item,
+  .nav-menu.show .nav-item {
+    background: transparent !important;
+  }
+  
+  .nav .nav-menu.is-open li a,
+  .nav-menu.is-open .nav-item a,
+  .nav-menu.show .nav-item a {
+    color: #f5f2ec !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   Q4 · 手機板全站文字放大(不依賴瀏覽器縮放)
+   2026-04-23
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  html { font-size: 17px !important; }
+  body {
+    font-size: 18px !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 標題層級調大 */
+  h1 { font-size: 2.1rem !important; line-height: 1.35 !important; }
+  h2 { font-size: 1.75rem !important; line-height: 1.4 !important; }
+  h3 { font-size: 1.4rem !important; line-height: 1.45 !important; }
+  h4 { font-size: 1.2rem !important; line-height: 1.5 !important; }
+  
+  p,
+  li,
+  td,
+  span:not(.nav-tel):not(.ic-phone):not(.num),
+  a:not(.bqv4-btn):not(.nav-tel):not(.nav-line):not(.bq-xlink-btn) {
+    font-size: 1.08rem !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 文章內 blog 區字再放大 */
+  .bq-cat-card h2 { font-size: 1.6rem !important; }
+  .bq-cat-card p,
+  .bq-cat-articles a,
+  .bq-cat-desc { font-size: 1.05rem !important; line-height: 1.7 !important; }
+  
+  /* 首頁 hero 保持原樣(避免擠壓) */
+  .bqv4-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem) !important; }
+  
+  /* 知識專區卡片 */
+  .bqv4-knowledge-card h3 { font-size: 1.4rem !important; }
+  .bqv4-knowledge-card p { font-size: 1.02rem !important; line-height: 1.75 !important; }
+  .bqv4-knowledge-card .num { font-size: 3rem !important; }
+  
+  /* 服務卡片 */
+  .bqv4-service-card h3 { font-size: 1.5rem !important; }
+  .bqv4-service-card p { font-size: 1.05rem !important; line-height: 1.8 !important; }
+  
+  /* 表單欄位字體 */
+  .bqv4-contact-form input,
+  .bqv4-contact-form select,
+  .bqv4-contact-form textarea {
+    font-size: 1.05rem !important;
+  }
+  .bqv4-form-title { font-size: 1.5rem !important; }
+  .bqv4-form-sub { font-size: 1rem !important; }
+  .bqv4-form-label { font-size: 0.98rem !important; }
+  
+  /* 按鈕字 */
+  .bqv4-btn { font-size: 1.02rem !important; padding: 1rem 2rem !important; }
+  
+  /* Footer 字加大 */
+  footer,
+  footer p,
+  footer span,
+  footer div { font-size: 0.95rem !important; line-height: 1.8 !important; }
+  
+  /* 統計 card */
+  .bqv4-stat-num { font-size: 3rem !important; }
+  .bqv4-stat-num sup { font-size: 1.3rem !important; }
+  .bqv4-stat-label { font-size: 0.9rem !important; }
+  
+  /* Pull quote */
+  .bqv4-pullquote,
+  blockquote { font-size: 1.25rem !important; line-height: 1.8 !important; }
+  
+  /* FAQ */
+  .bqv4-faq-q { font-size: 1.15rem !important; }
+  .bqv4-faq-a { font-size: 1.02rem !important; line-height: 1.85 !important; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 16.5px !important; }
+  body { font-size: 17.5px !important; }
+  h1 { font-size: 1.95rem !important; }
+  h2 { font-size: 1.65rem !important; }
+  h3 { font-size: 1.32rem !important; }
+  p, li, td { font-size: 1.05rem !important; line-height: 1.85 !important; }
+}
+
+
+</style>
 </head>
 <body>
 
@@ -635,6 +807,126 @@ article p{margin:0 0 20px}
     © 2026 寶璣建設有限公司 保留所有權利
   </div>
 </footer>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     文章互聯網 · 寶璣護城河(6 篇相關 + 服務頁 + 全站知識)
+     ══════════════════════════════════════════════════════════ -->
+<section class="bq-article-network" aria-labelledby="xlink-heading">
+  <div class="bq-xlink-inner">
+    <div class="bq-xlink-header">
+      <span class="bq-xlink-eyebrow">ARTICLE NETWORK · 延伸閱讀</span>
+      <h3 id="xlink-heading">繼續深入探索</h3>
+      <p>寶璣建設 143 篇完整知識網絡,同類深讀 × 跨主題延伸,建立您對土地議題的全貌理解。</p>
+    </div>
+
+    <div class="bq-xlink-grid">
+    
+      <a href="/blog/articles/joint-ownership-vs-tenancy-in-common.html" class="bq-xlink-card">
+        <span class="bq-xlink-tag">同類深讀</span>
+        <h4>公同共有 vs 分別共有</h4>
+      </a>
+      <a href="/blog/articles/joint-ownership-land-sale-guide.html" class="bq-xlink-card">
+        <span class="bq-xlink-tag">同類深讀</span>
+        <h4>公同共有土地買賣完全攻略</h4>
+      </a>
+      <a href="/blog/articles/joint-ownership-single-owner-sale.html" class="bq-xlink-card">
+        <span class="bq-xlink-tag">同類深讀</span>
+        <h4>公同共有單一繼承人能賣嗎?土地法 34-1 條、潛在應有部分、強制分割完整解析</h4>
+      </a>
+      <a href="/blog/articles/joint-ownership-to-separate-conversion.html" class="bq-xlink-card">
+        <span class="bq-xlink-tag">同類深讀</span>
+        <h4>公同共有變更分別共有完整流程</h4>
+      </a>
+      <a href="/blog/articles/partial-land-gift-house-investment.html" class="bq-xlink-card bq-xlink-cross">
+        <span class="bq-xlink-tag">延伸:持分土地</span>
+        <h4>持分土地贈與、房屋買賣、投資完整指南</h4>
+      </a>
+      <a href="/blog/articles/inheritance-land-73-forced-sale.html" class="bq-xlink-card bq-xlink-cross">
+        <span class="bq-xlink-tag">延伸:繼承・跨境</span>
+        <h4>繼承土地拖延未辦?土地法 73-1 標售危機</h4>
+      </a>
+    </div>
+
+    <div class="bq-xlink-cta">
+      <a href="/pages/joint-ownership.html" class="bq-xlink-btn bq-xlink-btn-primary">
+        諮詢「公同共有」專業服務 →
+      </a>
+      <a href="/blog/" class="bq-xlink-btn bq-xlink-btn-outline">
+        查看 143 篇完整知識專區
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.bq-article-network {
+  background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+  color: #f5f2ec;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(201,162,77,0.2);
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.bq-xlink-inner { max-width: 1240px; margin: 0 auto; }
+.bq-xlink-header { text-align: center; margin-bottom: 3rem; }
+.bq-xlink-eyebrow {
+  display: block; font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: #c9a24d; margin-bottom: 1.3rem;
+}
+.bq-xlink-header h3 {
+  font-family: 'Noto Serif TC', serif; font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 400; color: #f5f2ec; margin: 0 0 1rem;
+}
+.bq-xlink-header p {
+  color: #a8a29a; font-size: 1rem; line-height: 1.8;
+  max-width: 620px; margin: 0 auto;
+}
+.bq-xlink-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem; margin-bottom: 3rem;
+}
+.bq-xlink-card {
+  display: block; text-decoration: none; background: #1a1a1a;
+  padding: 1.5rem 1.3rem; border: 1px solid rgba(201,162,77,0.15);
+  border-radius: 3px; transition: all 0.3s;
+  position: relative; overflow: hidden;
+}
+.bq-xlink-card::before {
+  content: ""; position: absolute; top: 0; left: 0; height: 2px;
+  width: 0; background: #c9a24d; transition: width 0.4s;
+}
+.bq-xlink-card:hover { background: #222; border-color: #c9a24d; transform: translateY(-3px); }
+.bq-xlink-card:hover::before { width: 100%; }
+.bq-xlink-tag {
+  display: inline-block; font-size: 0.7rem; color: #c9a24d;
+  letter-spacing: 0.08em; margin-bottom: 0.7rem; opacity: 0.85;
+  font-weight: 500;
+}
+.bq-xlink-card.bq-xlink-cross .bq-xlink-tag {
+  color: #d4af7c;
+}
+.bq-xlink-card h4 {
+  font-family: 'Noto Serif TC', serif; font-size: 1rem;
+  font-weight: 400; color: #f5f2ec; line-height: 1.55;
+  margin: 0; transition: color 0.3s;
+}
+.bq-xlink-card:hover h4 { color: #c9a24d; }
+.bq-xlink-cta { text-align: center; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.bq-xlink-btn {
+  display: inline-block; padding: 0.95rem 2.2rem; border-radius: 3px;
+  text-decoration: none; font-weight: 500; letter-spacing: 0.08em;
+  font-size: 0.95rem; transition: all 0.3s;
+}
+.bq-xlink-btn-primary { background: #c9a24d; color: #0a0a0a; }
+.bq-xlink-btn-primary:hover { background: #d4af7c; transform: translateY(-2px); }
+.bq-xlink-btn-outline { background: transparent; color: #c9a24d; border: 1px solid #c9a24d; }
+.bq-xlink-btn-outline:hover { background: rgba(201,162,77,0.1); }
+@media (max-width: 640px) {
+  .bq-xlink-grid { grid-template-columns: 1fr; }
+  .bq-xlink-cta { flex-direction: column; align-items: center; }
+}
+</style>
 
 </body>
 </html>

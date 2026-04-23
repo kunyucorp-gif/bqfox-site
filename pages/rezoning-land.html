@@ -7,6 +7,10 @@
 <meta name="keywords" content="市地重劃,重劃地買賣,區段徵收,抵費地">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.bqfox.com/pages/rezoning-land.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" href="../assets/style.css">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://www.bqfox.com/#org", "name": "寶璣建設有限公司", "url": "https://www.bqfox.com", "telephone": "02-2274-6789", "address": {"@type": "PostalAddress", "streetAddress": "南雅南路二段144巷73號", "addressLocality": "板橋區", "addressRegion": "新北市", "addressCountry": "TW"}}</script>
@@ -305,6 +309,357 @@ body {
 }
 
 </style>
+
+
+<style>/* 2026-04-22 Mobile Typography & Color Fix */
+
+/* === 手機版全域字體放大 === */
+@media (max-width: 900px) {
+  /* 身體字體放大 */
+  html { font-size: 16px !important; }
+  body { font-size: 17px !important; line-height: 1.75 !important; }
+  
+  /* 標題加大 */
+  h1 { font-size: 1.85rem !important; line-height: 1.3 !important; }
+  h2 { font-size: 1.5rem !important; line-height: 1.35 !important; }
+  h3 { font-size: 1.2rem !important; line-height: 1.4 !important; }
+  h4 { font-size: 1.05rem !important; }
+  
+  /* 段落字體 */
+  p { font-size: 1rem !important; line-height: 1.85 !important; }
+  li { font-size: 1rem !important; }
+  
+  /* 服務頁內容字體 */
+  .page-section p { font-size: 1rem !important; }
+  .feature-card p { font-size: 0.95rem !important; }
+  .process-step p { font-size: 0.95rem !important; }
+  .faq-item p { font-size: 0.98rem !important; }
+}
+
+@media (max-width: 500px) {
+  html { font-size: 15px !important; }
+}
+
+/* === Nav 手機版黑底白字強制 === */
+@media (max-width: 900px) {
+  /* Menu overlay 背景純黑 */
+  .nav .nav-menu,
+  .nav .nav-menu.open {
+    background: #0a0a0a !important;
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s ease !important;
+    border-bottom: 1px solid #2a2824 !important;
+    z-index: 9998 !important;
+  }
+  
+  .nav .nav-menu { max-height: 0 !important; }
+  .nav .nav-menu.open {
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+  }
+  
+  /* 每個 item 邊框分隔 */
+  .nav .nav-menu .nav-item {
+    width: 100% !important;
+    display: block !important;
+    border-bottom: 1px solid #2a2824 !important;
+    background: #0a0a0a !important;
+  }
+  
+  /* ⭐ 關鍵修復:nav-link 強制白字!important */
+  .nav .nav-menu .nav-item .nav-link,
+  .nav .nav-menu .nav-item > a,
+  .nav .nav-menu a.nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 1.3rem 1.5rem !important;
+    color: #f5f2ec !important;              /* ← 白字 */
+    background: #0a0a0a !important;          /* ← 黑底 */
+    text-decoration: none !important;
+    font-size: 1.05rem !important;           /* ← 字體放大 */
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+  }
+  
+  .nav .nav-menu .nav-link:hover,
+  .nav .nav-menu .nav-link:active {
+    background: #1a1a1a !important;
+    color: #c9a24d !important;
+  }
+  
+  /* Dropdown 攤平顯示 */
+  .nav .nav-dd {
+    position: static !important;
+    padding-top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    background: #141414 !important;
+    display: block !important;
+  }
+  
+  /* ⭐ Dropdown 裡的連結文字 */
+  .nav .nav-dd > a,
+  .nav .nav-dd a[role="menuitem"] {
+    display: block !important;
+    padding: 1rem 1rem 1rem 2.5rem !important;
+    color: #d4c9b3 !important;               /* ← 稍淺的白色 */
+    background: #141414 !important;
+    text-decoration: none !important;
+    font-size: 0.98rem !important;
+    border-bottom: 1px solid #2a2824 !important;
+    border-top: none !important;
+  }
+  
+  .nav .nav-dd > a:first-child {
+    border-top: 2px solid #c9a24d !important;
+  }
+  
+  .nav .nav-dd > a:hover,
+  .nav .nav-dd > a:active {
+    background: #0a0a0a !important;
+    color: #c9a24d !important;
+  }
+  
+  /* Chevron icon 顯示 */
+  .nav .ic-chevron {
+    stroke: #c9a24d !important;
+    margin-left: 8px !important;
+  }
+  
+  /* Hamburger 保持顯示 */
+  .nav .hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+    position: relative !important;
+  }
+  
+  .nav .hamburger span {
+    display: block !important;
+    width: 26px !important;
+    height: 2px !important;
+    background: #f5f2ec !important;
+    transition: all 0.3s !important;
+    margin: 0 !important;
+  }
+  
+  .nav .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+  .nav .hamburger.open span:nth-child(2) { opacity: 0 !important; }
+  .nav .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+  
+  /* Nav 主體 */
+  .nav {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .nav .nav-tel { display: none !important; }
+  .nav .nav-logo-text small { display: none !important; }
+  .nav .nav-logo-text strong {
+    font-size: 1rem !important;
+  }
+  .nav .nav-line-btn {
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav .hamburger { display: none !important; }
+}
+
+</style>
+
+<style id="bq-mobile-fix-r2">
+/* ════════════════════════════════════════════════════════════
+   Q3 · 手機板 nav 選單黑底黑字修復(2026-04-23)
+   處理「營業項目」下拉選單在手機顯示黑底黑字問題
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* 頂層選單項目字顏色強制金白色 */
+  .nav .nav-menu .nav-item .nav-link,
+  .nav .nav-menu .nav-item > a,
+  .nav .nav-menu a.nav-link,
+  .nav .nav-menu .nav-link,
+  nav.nav ul li a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+  }
+  
+  /* 下拉選單容器 — 深色半透明背景 */
+  .nav .nav-menu .nav-item .nav-submenu,
+  .nav .nav-menu .nav-dd-menu,
+  .nav-submenu,
+  .nav-dd-menu,
+  ul.nav-submenu,
+  ul.nav-dd-menu {
+    background: #141414 !important;
+    border: 1px solid rgba(201, 162, 77, 0.25) !important;
+    border-radius: 3px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  /* 下拉選單內的項目 — 金白色字,透明背景 */
+  .nav .nav-menu .nav-submenu li a,
+  .nav .nav-menu .nav-dd-menu li a,
+  .nav-submenu li a,
+  .nav-dd-menu li a,
+  .nav-submenu a,
+  .nav-dd-menu a {
+    color: #f5f2ec !important;
+    background: transparent !important;
+    padding: 0.85rem 1.4rem !important;
+    display: block !important;
+    font-size: 1.05rem !important;
+    border-bottom: 1px solid rgba(201, 162, 77, 0.1) !important;
+    text-decoration: none !important;
+  }
+  
+  .nav-submenu li a:hover,
+  .nav-dd-menu li a:hover,
+  .nav-submenu li a:active,
+  .nav-dd-menu li a:active {
+    color: #c9a24d !important;
+    background: rgba(201, 162, 77, 0.08) !important;
+  }
+  
+  .nav-submenu li:last-child a,
+  .nav-dd-menu li:last-child a {
+    border-bottom: none !important;
+  }
+  
+  /* 手機版打開後整個 nav-menu 的背景 */
+  .nav .nav-menu.is-open,
+  .nav-menu.is-open,
+  .nav-menu.show {
+    background: #0a0a0a !important;
+    color: #f5f2ec !important;
+  }
+  
+  .nav .nav-menu.is-open li,
+  .nav-menu.is-open .nav-item,
+  .nav-menu.show .nav-item {
+    background: transparent !important;
+  }
+  
+  .nav .nav-menu.is-open li a,
+  .nav-menu.is-open .nav-item a,
+  .nav-menu.show .nav-item a {
+    color: #f5f2ec !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   Q4 · 手機板全站文字放大(不依賴瀏覽器縮放)
+   2026-04-23
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  html { font-size: 17px !important; }
+  body {
+    font-size: 18px !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 標題層級調大 */
+  h1 { font-size: 2.1rem !important; line-height: 1.35 !important; }
+  h2 { font-size: 1.75rem !important; line-height: 1.4 !important; }
+  h3 { font-size: 1.4rem !important; line-height: 1.45 !important; }
+  h4 { font-size: 1.2rem !important; line-height: 1.5 !important; }
+  
+  p,
+  li,
+  td,
+  span:not(.nav-tel):not(.ic-phone):not(.num),
+  a:not(.bqv4-btn):not(.nav-tel):not(.nav-line):not(.bq-xlink-btn) {
+    font-size: 1.08rem !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 文章內 blog 區字再放大 */
+  .bq-cat-card h2 { font-size: 1.6rem !important; }
+  .bq-cat-card p,
+  .bq-cat-articles a,
+  .bq-cat-desc { font-size: 1.05rem !important; line-height: 1.7 !important; }
+  
+  /* 首頁 hero 保持原樣(避免擠壓) */
+  .bqv4-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem) !important; }
+  
+  /* 知識專區卡片 */
+  .bqv4-knowledge-card h3 { font-size: 1.4rem !important; }
+  .bqv4-knowledge-card p { font-size: 1.02rem !important; line-height: 1.75 !important; }
+  .bqv4-knowledge-card .num { font-size: 3rem !important; }
+  
+  /* 服務卡片 */
+  .bqv4-service-card h3 { font-size: 1.5rem !important; }
+  .bqv4-service-card p { font-size: 1.05rem !important; line-height: 1.8 !important; }
+  
+  /* 表單欄位字體 */
+  .bqv4-contact-form input,
+  .bqv4-contact-form select,
+  .bqv4-contact-form textarea {
+    font-size: 1.05rem !important;
+  }
+  .bqv4-form-title { font-size: 1.5rem !important; }
+  .bqv4-form-sub { font-size: 1rem !important; }
+  .bqv4-form-label { font-size: 0.98rem !important; }
+  
+  /* 按鈕字 */
+  .bqv4-btn { font-size: 1.02rem !important; padding: 1rem 2rem !important; }
+  
+  /* Footer 字加大 */
+  footer,
+  footer p,
+  footer span,
+  footer div { font-size: 0.95rem !important; line-height: 1.8 !important; }
+  
+  /* 統計 card */
+  .bqv4-stat-num { font-size: 3rem !important; }
+  .bqv4-stat-num sup { font-size: 1.3rem !important; }
+  .bqv4-stat-label { font-size: 0.9rem !important; }
+  
+  /* Pull quote */
+  .bqv4-pullquote,
+  blockquote { font-size: 1.25rem !important; line-height: 1.8 !important; }
+  
+  /* FAQ */
+  .bqv4-faq-q { font-size: 1.15rem !important; }
+  .bqv4-faq-a { font-size: 1.02rem !important; line-height: 1.85 !important; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 16.5px !important; }
+  body { font-size: 17.5px !important; }
+  h1 { font-size: 1.95rem !important; }
+  h2 { font-size: 1.65rem !important; }
+  h3 { font-size: 1.32rem !important; }
+  p, li, td { font-size: 1.05rem !important; line-height: 1.85 !important; }
+}
+
+
+</style>
 </head>
 <body>
 <nav class="nav" id="nav" role="navigation" aria-label="主要導覽">
@@ -417,36 +772,66 @@ body {
         深入了解 <em style="font-style:normal;color:#c9a24d;">重劃地/其他</em>
       </h2>
       <p style="color:#a8a29a;font-size:1rem;line-height:1.85;max-width:620px;margin:0 auto;font-weight:300;">
-        由律師與地政士親撰的 10 篇專業文章,從法律依據到六都實戰案例完整解析。
+        由律師與地政士親撰的 19 篇專業文章,從法律依據到六都實戰案例完整解析。
       </p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid #2a2824;border-left:1px solid #2a2824;">
+    <a href="/blog/articles/agricultural-land-tax-exemption.html" class="bq-related-article">
+      <h4>農地免徵土增稅完整指南 2026</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-complete-buyers-guide.html" class="bq-related-article">
+      <h4>重劃地買賣完整指南</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-vs-section-expropriation.html" class="bq-related-article">
+      <h4>市地重劃 vs 區段徵收</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-price-calculation-formula.html" class="bq-related-article">
+      <h4>重劃地價格怎麼算?抵費地公式、查估鑑價、2026 六都行情完整解析</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-taipei-taoyuan-market-2026.html" class="bq-related-article">
+      <h4>雙北桃園重劃地 2026 熱區分析</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-holder-rights-process.html" class="bq-related-article">
+      <h4>市地重劃地主完整權益指南</h4>
+    </a>
+    <a href="/blog/articles/counter-value-land-tax-tricks.html" class="bq-related-article">
+      <h4>抵價地、抵費地稅務深度解析</h4>
+    </a>
+    <a href="/blog/articles/section-expropriation-compensation-fight.html" class="bq-related-article">
+      <h4>區段徵收補償不滿意怎麼辦?協議價購、異議、訴願、行政訴訟 4 階段救濟指南</h4>
+    </a>
+    <a href="/blog/articles/rezoning-land-investment-risk-analysis.html" class="bq-related-article">
+      <h4>重劃地投資可以賺多少?6 大盈虧關鍵、5 年報酬試算、風險雷區完整分析</h4>
+    </a>
+    <a href="/blog/articles/cadastral-cleanup-auction-guide.html" class="bq-related-article">
+      <h4>地籍清理代為標售懶人包</h4>
+    </a>
+    <a href="/blog/articles/elder-land-fraud-prevention.html" class="bq-related-article">
+      <h4>長輩名下土地最易出事？詐騙怎樣下手你知道嗎？5 招保護家族資產</h4>
+    </a>
+    <a href="/blog/articles/fake-buyer-fraud-tactics.html" class="bq-related-article">
+      <h4>買方詐騙新招</h4>
+    </a>
     <a href="/blog/articles/farm-land-annex-release-guide.html" class="bq-related-article">
       <h4>農地解除套繪管制全攻略</h4>
     </a>
-    <a href="/blog/articles/which-land-for-bnb.html" class="bq-related-article">
-      <h4>什麼樣的土地可以用來蓋民宿?土地分區、合法條件一次看懂</h4>
+    <a href="/blog/articles/land-owner-lookup-guide.html" class="bq-related-article">
+      <h4>三分鐘教你查清楚</h4>
+    </a>
+    <a href="/blog/articles/land-seizure-fraud-prevention.html" class="bq-related-article">
+      <h4>土地被查封竟不知情？防範法院拍賣詐騙有撇步</h4>
+    </a>
+    <a href="/blog/articles/low-price-offer-fraud-warning.html" class="bq-related-article">
+      <h4>聲稱「低價收購土地」的是詐騙嗎？這樣判斷最安全</h4>
+    </a>
+    <a href="/blog/articles/relative-fraud-fake-authorization.html" class="bq-related-article">
+      <h4>親戚也會騙？揭秘假委託書賣地手法</h4>
     </a>
     <a href="/blog/articles/unregistered-building.html" class="bq-related-article">
       <h4>未保存登記建物是什麼？會被拆嗎？專家帶你一次看懂所有權與補登流程</h4>
     </a>
-    <a href="/blog/articles/farm-land-house-transfer-guide.html" class="bq-related-article">
-      <h4>農地農舍移轉懶人包</h4>
-    </a>
-    <a href="/blog/articles/land-owner-lookup-guide.html" class="bq-related-article">
-      <h4>三分鐘教你查清楚:土地真正的所有人是誰</h4>
-    </a>
-    <a href="/blog/articles/statutory-open-space.html" class="bq-related-article">
-      <h4>認識法定空地:建築用地中不可忽略的隱形規定</h4>
-    </a>
-    <a href="/blog/articles/land-superficies-transfer.html" class="bq-related-article">
-      <h4>地上權移轉登記全攻略:從基礎概念到實務操作一次搞懂</h4>
-    </a>
-    <a href="/blog/articles/anyone-can-buy-farm-land.html" class="bq-related-article">
-      <h4>人人都能買農地,不只是農民的專利</h4>
-    </a>
-    <a href="/blog/articles/fake-buyer-fraud-tactics.html" class="bq-related-article">
-      <h4>買方詐騙新招:假買家、真詐騙,如何識破？5 個警訊地主必看</h4>
+    <a href="/blog/articles/which-land-for-bnb.html" class="bq-related-article">
+      <h4>什麼樣的土地可以用來蓋民宿?土地分區、合法條件一次看懂</h4>
     </a>
     </div>
     <div style="text-align:center;margin-top:3rem;">
@@ -552,6 +937,41 @@ body {
     else nav.classList.remove('scrolled');
   });
 })();
+</script>
+
+
+<script>
+// 2026-04-22 Final Hamburger Fix — 強制最後執行,覆蓋 main.js
+window.addEventListener('load', function() {
+  var btn = document.getElementById('hbtn');
+  var menu = document.querySelector('.nav .nav-menu');
+  if (!btn || !menu) { console.log('hamburger elements not found'); return; }
+  
+  // 清空 button 舊的 onclick(如果有)
+  btn.onclick = null;
+  
+  // 直接用 onclick 屬性(覆蓋所有 addEventListener)
+  btn.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    console.log('hamburger clicked, open=' + isOpen);
+    return false;
+  };
+  
+  // 點選單項後關閉
+  var links = menu.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+    });
+  }
+  
+  console.log('hamburger bound successfully');
+});
 </script>
 
 </body>
