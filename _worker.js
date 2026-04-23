@@ -24,7 +24,8 @@
  *   - Phase 7 Batch 9 (2026-04-22): 8 篇持分土地終極戰場(56,429 曝光/月)
  *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸)
  *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資)
- *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決) ← 本次更新
+ *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決)
+ *   - Batch 13 (2026-04-23): 8 篇公同共有終極權威(vs分別/變更/繼承/分割訴訟/單獨賣/六都GEO/失聯/稅務) ← 本次更新
  */
 
 // ============================================
@@ -527,6 +528,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/三七五判決': '/blog/articles/375-latest-judgments-2026.html',
   '/首頁/f/三七五判決': '/blog/articles/375-latest-judgments-2026.html',
   '/f/三七五最高法院': '/blog/articles/375-latest-judgments-2026.html',
+
+  // ===== Batch 13 公同共有終極權威(2026-04-23 新增 8 篇)=====
+  // 1. 公同共有 vs 分別共有
+  '/f/公同共有vs分別共有': '/blog/articles/joint-ownership-vs-tenancy-in-common.html',
+  '/首頁/f/公同共有vs分別共有': '/blog/articles/joint-ownership-vs-tenancy-in-common.html',
+  '/f/公同共有差別': '/blog/articles/joint-ownership-vs-tenancy-in-common.html',
+
+  // 2. 變更分別共有流程
+  '/f/公同共有變更分別共有': '/blog/articles/joint-ownership-to-separate-conversion.html',
+  '/首頁/f/公同共有變更分別共有': '/blog/articles/joint-ownership-to-separate-conversion.html',
+  '/f/共有型態變更': '/blog/articles/joint-ownership-to-separate-conversion.html',
+
+  // 3. 公同共有繼承指南
+  '/f/公同共有繼承': '/blog/articles/joint-ownership-inheritance-complete-guide.html',
+  '/首頁/f/公同共有繼承': '/blog/articles/joint-ownership-inheritance-complete-guide.html',
+  '/f/繼承登記公同共有': '/blog/articles/joint-ownership-inheritance-complete-guide.html',
+
+  // 4. 分割訴訟 SOP
+  '/f/公同共有分割訴訟': '/blog/articles/joint-ownership-partition-lawsuit.html',
+  '/首頁/f/公同共有分割訴訟': '/blog/articles/joint-ownership-partition-lawsuit.html',
+  '/f/裁判分割': '/blog/articles/joint-ownership-partition-lawsuit.html',
+
+  // 5. 單一繼承人能賣嗎
+  '/f/公同共有單獨出售': '/blog/articles/joint-ownership-single-owner-sale.html',
+  '/首頁/f/公同共有單獨出售': '/blog/articles/joint-ownership-single-owner-sale.html',
+  '/f/土地法34-1': '/blog/articles/joint-ownership-single-owner-sale.html',
+
+  // 6. 六都公同共有
+  '/f/六都公同共有': '/blog/articles/joint-ownership-six-cities-market-2026.html',
+  '/首頁/f/六都公同共有': '/blog/articles/joint-ownership-six-cities-market-2026.html',
+  '/f/公同共有收購': '/blog/articles/joint-ownership-six-cities-market-2026.html',
+
+  // 7. 失聯/海外親屬
+  '/f/公同共有失聯': '/blog/articles/joint-ownership-contact-lost-solutions.html',
+  '/首頁/f/公同共有失聯': '/blog/articles/joint-ownership-contact-lost-solutions.html',
+  '/f/海外共有人': '/blog/articles/joint-ownership-contact-lost-solutions.html',
+
+  // 8. 稅務完整試算
+  '/f/公同共有土增稅': '/blog/articles/joint-ownership-tax-complete-calculation.html',
+  '/首頁/f/公同共有土增稅': '/blog/articles/joint-ownership-tax-complete-calculation.html',
+  '/f/公同共有稅務': '/blog/articles/joint-ownership-tax-complete-calculation.html',
 };
 
 // ============================================

@@ -1225,4 +1225,63 @@
     <priority>0.85</priority>
   </url>
 
+
+  <!-- ===== Batch 13 公同共有終極權威 8 篇(2026-04-23 新增)===== -->
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-vs-tenancy-in-common.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-to-separate-conversion.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-inheritance-complete-guide.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-partition-lawsuit.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-single-owner-sale.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-six-cities-market-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-contact-lost-solutions.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/joint-ownership-tax-complete-calculation.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
