@@ -23,7 +23,8 @@
  *   - Phase 7 Batch 8 (2026-04-22): 8 篇公共設施保留地主題群文章(GEO + 多元分類)
  *   - Phase 7 Batch 9 (2026-04-22): 8 篇持分土地終極戰場(56,429 曝光/月)
  *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸)
- *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資) ← 本次更新
+ *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資)
+ *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決) ← 本次更新
  */
 
 // ============================================
@@ -485,6 +486,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/重劃地投資': '/blog/articles/rezoning-land-investment-risk-analysis.html',
   '/首頁/f/重劃地投資': '/blog/articles/rezoning-land-investment-risk-analysis.html',
   '/f/重劃地報酬率': '/blog/articles/rezoning-land-investment-risk-analysis.html',
+
+  // ===== Batch 12 三七五租約終極權威(2026-04-23 新增 8 篇)=====
+  // 1. 三七五租約終止流程
+  '/f/三七五租約終止': '/blog/articles/terminate-375-tenancy-complete-process.html',
+  '/首頁/f/三七五租約終止': '/blog/articles/terminate-375-tenancy-complete-process.html',
+  '/f/三七五收回耕地': '/blog/articles/terminate-375-tenancy-complete-process.html',
+
+  // 2. 三七五補償費試算
+  '/f/三七五補償費': '/blog/articles/land-reform-compensation-calculation.html',
+  '/首頁/f/三七五補償費': '/blog/articles/land-reform-compensation-calculation.html',
+  '/f/三七五1/3公告現值': '/blog/articles/land-reform-compensation-calculation.html',
+
+  // 3. 有三七五土地買賣
+  '/f/有三七五租約的土地能買賣嗎': '/blog/articles/375-land-buyer-seller-guide.html',
+  '/首頁/f/有三七五租約的土地能買賣嗎': '/blog/articles/375-land-buyer-seller-guide.html',
+  '/f/三七五優先購買權': '/blog/articles/375-land-buyer-seller-guide.html',
+
+  // 4. 六都三七五熱區 GEO
+  '/f/六都三七五': '/blog/articles/375-tenancy-six-cities-market-2026.html',
+  '/首頁/f/六都三七五': '/blog/articles/375-tenancy-six-cities-market-2026.html',
+  '/f/桃園台中台南三七五': '/blog/articles/375-tenancy-six-cities-market-2026.html',
+
+  // 5. 三七五佃農權益
+  '/f/三七五佃農權益': '/blog/articles/375-tenant-rights-complete-guide.html',
+  '/首頁/f/三七五佃農權益': '/blog/articles/375-tenant-rights-complete-guide.html',
+  '/f/三七五承租權': '/blog/articles/375-tenant-rights-complete-guide.html',
+
+  // 6. 三七五繼承爭議
+  '/f/三七五繼承爭議': '/blog/articles/375-inheritance-dispute-solutions.html',
+  '/首頁/f/三七五繼承爭議': '/blog/articles/375-inheritance-dispute-solutions.html',
+  '/f/三七五佃農死亡繼承': '/blog/articles/375-inheritance-dispute-solutions.html',
+
+  // 7. 建商收三七五攻略
+  '/f/建商收三七五': '/blog/articles/375-land-developer-integration.html',
+  '/首頁/f/建商收三七五': '/blog/articles/375-land-developer-integration.html',
+  '/f/三七五合建分房': '/blog/articles/375-land-developer-integration.html',
+
+  // 8. 三七五最新判決
+  '/f/三七五判決': '/blog/articles/375-latest-judgments-2026.html',
+  '/首頁/f/三七五判決': '/blog/articles/375-latest-judgments-2026.html',
+  '/f/三七五最高法院': '/blog/articles/375-latest-judgments-2026.html',
 };
 
 // ============================================
