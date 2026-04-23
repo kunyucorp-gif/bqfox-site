@@ -22,7 +22,8 @@
  *   - Phase 7 Batch 7 (2026-04-22): 8 篇道路用地進攻型主題群文章(GEO 強化)
  *   - Phase 7 Batch 8 (2026-04-22): 8 篇公共設施保留地主題群文章(GEO + 多元分類)
  *   - Phase 7 Batch 9 (2026-04-22): 8 篇持分土地終極戰場(56,429 曝光/月)
- *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸) ← 本次更新
+ *   - Batch 10 (2026-04-23): 8 篇持分土地深度型(稅務/失聯/GEO/訴訟/法拍/詐騙/時效/兩岸)
+ *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資) ← 本次更新
  */
 
 // ============================================
@@ -443,6 +444,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/兩岸繼承持分土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
   '/首頁/f/兩岸繼承持分土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
   '/f/陸配繼承台灣土地': '/blog/articles/partial-land-cross-strait-inheritance-process.html',
+
+  // ===== Batch 11 重劃地專業權威(2026-04-23 新增 8 篇)=====
+  // 1. 重劃地買賣完整指南
+  '/f/重劃地買賣': '/blog/articles/rezoning-land-complete-buyers-guide.html',
+  '/首頁/f/重劃地買賣': '/blog/articles/rezoning-land-complete-buyers-guide.html',
+  '/f/重劃地怎麼買': '/blog/articles/rezoning-land-complete-buyers-guide.html',
+
+  // 2. 市地重劃 vs 區段徵收
+  '/f/市地重劃和區段徵收差別': '/blog/articles/rezoning-land-vs-section-expropriation.html',
+  '/首頁/f/市地重劃和區段徵收差別': '/blog/articles/rezoning-land-vs-section-expropriation.html',
+  '/f/市地重劃區段徵收比較': '/blog/articles/rezoning-land-vs-section-expropriation.html',
+
+  // 3. 重劃地價格計算
+  '/f/重劃地價格怎麼算': '/blog/articles/rezoning-land-price-calculation-formula.html',
+  '/首頁/f/重劃地價格怎麼算': '/blog/articles/rezoning-land-price-calculation-formula.html',
+  '/f/抵費地公式': '/blog/articles/rezoning-land-price-calculation-formula.html',
+
+  // 4. 雙北桃園重劃地 GEO
+  '/f/雙北桃園重劃地': '/blog/articles/rezoning-land-taipei-taoyuan-market-2026.html',
+  '/首頁/f/雙北桃園重劃地': '/blog/articles/rezoning-land-taipei-taoyuan-market-2026.html',
+  '/f/青埔航空城林口重劃地': '/blog/articles/rezoning-land-taipei-taoyuan-market-2026.html',
+
+  // 5. 市地重劃地主權益
+  '/f/市地重劃地主權益': '/blog/articles/rezoning-land-holder-rights-process.html',
+  '/首頁/f/市地重劃地主權益': '/blog/articles/rezoning-land-holder-rights-process.html',
+  '/f/自辦公辦重劃差別': '/blog/articles/rezoning-land-holder-rights-process.html',
+
+  // 6. 抵費地抵價地稅務
+  '/f/抵費地土增稅': '/blog/articles/counter-value-land-tax-tricks.html',
+  '/首頁/f/抵費地土增稅': '/blog/articles/counter-value-land-tax-tricks.html',
+  '/f/抵價地節稅': '/blog/articles/counter-value-land-tax-tricks.html',
+
+  // 7. 區段徵收補償救濟
+  '/f/區段徵收補償': '/blog/articles/section-expropriation-compensation-fight.html',
+  '/首頁/f/區段徵收補償': '/blog/articles/section-expropriation-compensation-fight.html',
+  '/f/徵收補償異議訴願': '/blog/articles/section-expropriation-compensation-fight.html',
+
+  // 8. 重劃地投資分析
+  '/f/重劃地投資': '/blog/articles/rezoning-land-investment-risk-analysis.html',
+  '/首頁/f/重劃地投資': '/blog/articles/rezoning-land-investment-risk-analysis.html',
+  '/f/重劃地報酬率': '/blog/articles/rezoning-land-investment-risk-analysis.html',
 };
 
 // ============================================

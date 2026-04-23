@@ -1107,4 +1107,63 @@
     <priority>0.85</priority>
   </url>
 
+
+  <!-- ===== Batch 11 重劃地專業權威 8 篇(2026-04-23 新增)===== -->
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-complete-buyers-guide.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-vs-section-expropriation.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-price-calculation-formula.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-taipei-taoyuan-market-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-holder-rights-process.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/counter-value-land-tax-tricks.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/section-expropriation-compensation-fight.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bqfox.com/blog/articles/rezoning-land-investment-risk-analysis.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
