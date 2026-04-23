@@ -26,7 +26,8 @@
  *   - Batch 11 (2026-04-23): 8 篇重劃地專業權威(指南/比較/價格/GEO/權益/稅務/救濟/投資)
  *   - Batch 12 (2026-04-23): 8 篇三七五租約終極權威(終止/補償/買賣/六都GEO/佃農/繼承/建商/判決)
  *   - Batch 13 (2026-04-23): 8 篇公同共有終極權威(vs分別/變更/繼承/分割訴訟/單獨賣/六都GEO/失聯/稅務)
- *   - Batch 14 (2026-04-23): 8 篇祭祀公業終極權威(派下權/買賣/法人/管理人/糾紛/六都GEO/解散/稅務) ← 本次更新
+ *   - Batch 14 (2026-04-23): 8 篇祭祀公業終極權威(派下權/買賣/法人/管理人/糾紛/六都GEO/解散/稅務)
+ *   - Batch 15 (2026-04-23): 8 篇地政繼承權威(順位/遺產稅/登記SOP/拋棄限定/節稅/配偶/73-1救援/六都GEO) ← 本次更新
  */
 
 // ============================================
@@ -611,6 +612,47 @@ const ARTICLE_PRECISE_REDIRECTS = {
   '/f/祭祀公業土增稅': '/blog/articles/ancestral-tax-complete-guide.html',
   '/首頁/f/祭祀公業土增稅': '/blog/articles/ancestral-tax-complete-guide.html',
   '/f/祭祀公業稅務': '/blog/articles/ancestral-tax-complete-guide.html',
+
+  // ===== Batch 15 地政繼承權威(2026-04-23 新增 8 篇)=====
+  // 1. 繼承順位完整指南
+  '/f/遺產繼承順位': '/blog/articles/inheritance-order-complete-2026.html',
+  '/首頁/f/遺產繼承順位': '/blog/articles/inheritance-order-complete-2026.html',
+  '/f/應繼分特留分': '/blog/articles/inheritance-order-complete-2026.html',
+
+  // 2. 2026 遺產稅計算
+  '/f/遺產稅計算': '/blog/articles/inheritance-tax-calculation-2026.html',
+  '/首頁/f/遺產稅計算': '/blog/articles/inheritance-tax-calculation-2026.html',
+  '/f/遺產稅免稅額': '/blog/articles/inheritance-tax-calculation-2026.html',
+
+  // 3. 不動產繼承登記 SOP
+  '/f/不動產繼承登記': '/blog/articles/inheritance-land-registration-sop.html',
+  '/首頁/f/不動產繼承登記': '/blog/articles/inheritance-land-registration-sop.html',
+  '/f/繼承登記流程': '/blog/articles/inheritance-land-registration-sop.html',
+
+  // 4. 拋棄繼承 vs 限定繼承
+  '/f/拋棄繼承': '/blog/articles/inheritance-renunciation-limited-comparison.html',
+  '/首頁/f/拋棄繼承': '/blog/articles/inheritance-renunciation-limited-comparison.html',
+  '/f/限定繼承': '/blog/articles/inheritance-renunciation-limited-comparison.html',
+
+  // 5. 節稅 15 策略
+  '/f/遺產稅節稅': '/blog/articles/inheritance-tax-savings-strategies.html',
+  '/首頁/f/遺產稅節稅': '/blog/articles/inheritance-tax-savings-strategies.html',
+  '/f/生前贈與': '/blog/articles/inheritance-tax-savings-strategies.html',
+
+  // 6. 配偶繼承 + 剩餘財產
+  '/f/配偶繼承': '/blog/articles/inheritance-spouse-rights-residual-property.html',
+  '/首頁/f/配偶繼承': '/blog/articles/inheritance-spouse-rights-residual-property.html',
+  '/f/剩餘財產分配請求權': '/blog/articles/inheritance-spouse-rights-residual-property.html',
+
+  // 7. 土地法 73-1 救援
+  '/f/土地法73-1': '/blog/articles/inheritance-land-73-forced-sale.html',
+  '/首頁/f/土地法73-1': '/blog/articles/inheritance-land-73-forced-sale.html',
+  '/f/繼承土地未辦': '/blog/articles/inheritance-land-73-forced-sale.html',
+
+  // 8. 六都繼承疑難 GEO
+  '/f/六都繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
+  '/首頁/f/六都繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
+  '/f/代位繼承': '/blog/articles/inheritance-six-cities-complex-cases.html',
 };
 
 // ============================================
