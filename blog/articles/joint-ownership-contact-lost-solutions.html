@@ -928,5 +928,351 @@ article p{margin:0 0 20px}
 }
 </style>
 
+
+<style id="bq-ultimate-mobile-fix">
+/* ════════════════════════════════════════════════════════════
+   🛡🛡🛡 終極手機修復(2026-04-24 Round 3)
+   用於 Kevin 回報的 Apple + Android 手機問題
+   ════════════════════════════════════════════════════════════ */
+
+/* ─── Part 1:hamburger 三橫符號強制顯示 + 放大 ─── */
+@media (max-width: 900px) {
+  /* 所有 hamburger 相關 class 都強制顯示 */
+  .nav .hamburger,
+  .nav .nav-hamburger,
+  nav .hamburger,
+  nav .nav-hamburger,
+  button.hamburger,
+  button.nav-hamburger,
+  #hamBtn {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 10px !important;
+    background: rgba(201, 162, 77, 0.08) !important;
+    border: 1px solid rgba(201, 162, 77, 0.35) !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    z-index: 10001 !important;
+    position: relative !important;
+  }
+  
+  /* 三條線 */
+  .nav .hamburger span,
+  .nav .nav-hamburger span,
+  nav .hamburger span,
+  nav .nav-hamburger span,
+  button.hamburger span,
+  button.nav-hamburger span,
+  #hamBtn span {
+    display: block !important;
+    width: 26px !important;
+    height: 3px !important;
+    background: #c9a24d !important;  /* 金色三橫 */
+    margin: 0 !important;
+    border-radius: 2px !important;
+    transition: all 0.3s !important;
+  }
+  
+  /* 展開時:三橫變 X */
+  .nav .hamburger.open span:nth-child(1),
+  .nav .hamburger.is-active span:nth-child(1),
+  .nav .nav-hamburger.open span:nth-child(1),
+  .nav .nav-hamburger.is-active span:nth-child(1),
+  #hamBtn.open span:nth-child(1),
+  #hamBtn.is-active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg) !important;
+    background: #f5f2ec !important;  /* X 變白色更明顯 */
+  }
+  
+  .nav .hamburger.open span:nth-child(2),
+  .nav .hamburger.is-active span:nth-child(2),
+  .nav .nav-hamburger.open span:nth-child(2),
+  .nav .nav-hamburger.is-active span:nth-child(2),
+  #hamBtn.open span:nth-child(2),
+  #hamBtn.is-active span:nth-child(2) {
+    opacity: 0 !important;
+  }
+  
+  .nav .hamburger.open span:nth-child(3),
+  .nav .hamburger.is-active span:nth-child(3),
+  .nav .nav-hamburger.open span:nth-child(3),
+  .nav .nav-hamburger.is-active span:nth-child(3),
+  #hamBtn.open span:nth-child(3),
+  #hamBtn.is-active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg) !important;
+    background: #f5f2ec !important;  /* X 變白色更明顯 */
+  }
+}
+
+/* ─── Part 2:手機展開選單時,全部強制金白字深背景 ─── */
+@media (max-width: 900px) {
+  /* 展開狀態的 menu 主背景 */
+  .nav .nav-menu.open,
+  .nav .nav-menu.is-open,
+  .nav .nav-menu.show,
+  nav .nav-menu.open,
+  nav .nav-menu.is-open,
+  ul.nav-menu.open,
+  ul.nav-menu.is-open {
+    background: #0a0a0a !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 10000 !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+  
+  /* 展開狀態下所有項目 */
+  .nav .nav-menu.open li,
+  .nav .nav-menu.open .nav-item,
+  .nav .nav-menu.is-open li,
+  .nav .nav-menu.is-open .nav-item,
+  .nav .nav-menu.show li,
+  ul.nav-menu.open li {
+    display: block !important;
+    width: 100% !important;
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #2a2824 !important;
+    list-style: none !important;
+  }
+  
+  /* 展開狀態下所有連結 — 金白字深色底 */
+  .nav .nav-menu.open li a,
+  .nav .nav-menu.open .nav-link,
+  .nav .nav-menu.open .nav-item > a,
+  .nav .nav-menu.is-open li a,
+  .nav .nav-menu.is-open .nav-link,
+  .nav .nav-menu.is-open .nav-item > a,
+  .nav .nav-menu.show li a,
+  ul.nav-menu.open li a {
+    display: block !important;
+    width: 100% !important;
+    padding: 1.2rem 1.5rem !important;
+    color: #f5f2ec !important;  /* 白字 */
+    background: #0a0a0a !important;  /* 深黑底 */
+    text-decoration: none !important;
+    font-size: 1.08rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+    border: none !important;
+    box-sizing: border-box !important;
+  }
+  
+  .nav .nav-menu.open li a:hover,
+  .nav .nav-menu.open li a:active,
+  .nav .nav-menu.is-open li a:hover,
+  .nav .nav-menu.is-open li a:active {
+    background: #1a1a1a !important;
+    color: #c9a24d !important;  /* 金色 hover */
+  }
+}
+
+/* ─── Part 3:下拉選單(營業項目/相關連結展開)強制金白字 ─── */
+@media (max-width: 900px) {
+  /* 下拉容器 */
+  .nav .nav-dd,
+  .nav .nav-submenu,
+  .nav .nav-dd-menu,
+  .nav-dd,
+  nav .nav-dd,
+  div.nav-dd,
+  ul.nav-submenu,
+  ul.nav-dd-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    background: #141414 !important;  /* 稍微不同的深灰 */
+    border: none !important;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.5) !important;
+    display: block !important;
+  }
+  
+  /* 下拉連結 — 強制深底 + 淺金白字 */
+  .nav .nav-dd > a,
+  .nav .nav-dd a,
+  .nav .nav-dd a[role="menuitem"],
+  .nav .nav-submenu li a,
+  .nav .nav-submenu a,
+  .nav .nav-dd-menu li a,
+  .nav .nav-dd-menu a,
+  .nav-dd > a,
+  .nav-dd a[role="menuitem"],
+  nav .nav-dd a {
+    display: block !important;
+    padding: 1rem 2.5rem !important;  /* 縮排表示子層 */
+    color: #d4c9b3 !important;  /* 稍淺白金色 */
+    background: #141414 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    border-top: 1px solid #2a2824 !important;
+    border-bottom: none !important;
+  }
+  
+  /* 第一項加強金色頂線 */
+  .nav .nav-dd > a:first-child,
+  .nav .nav-dd a[role="menuitem"]:first-child {
+    border-top: 2px solid #c9a24d !important;
+  }
+  
+  .nav .nav-dd > a:hover,
+  .nav .nav-dd > a:active,
+  .nav .nav-dd a:hover,
+  .nav .nav-dd a:active {
+    background: #0a0a0a !important;
+    color: #c9a24d !important;  /* 純金色 */
+    padding-left: 3rem !important;
+  }
+}
+
+/* ─── Part 4:ic-chevron 箭頭強制金色 ─── */
+@media (max-width: 900px) {
+  .nav .ic-chevron,
+  .ic-chevron {
+    stroke: #c9a24d !important;
+    color: #c9a24d !important;
+    margin-left: 8px !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ─── Part 5:nav 固定定位 + body 緩衝 ─── */
+@media (max-width: 900px) {
+  .nav,
+  nav.nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #2a2824 !important;
+    padding: 0.6rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  body {
+    padding-top: 72px !important;
+  }
+  
+  /* logo 手機限制 */
+  .nav-logo-mark,
+  .nav .nav-logo-mark {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .nav-logo-mark svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .nav-logo-text strong,
+  .nav .nav-logo-text strong {
+    font-size: 0.92rem !important;
+    white-space: nowrap !important;
+  }
+  
+  .nav-logo-text small,
+  .nav .nav-logo-text small {
+    display: none !important;
+  }
+  
+  /* 電話號碼手機隱藏 */
+  .nav-tel,
+  .nav .nav-tel {
+    display: none !important;
+  }
+  
+  /* LINE 按鈕縮小 */
+  .nav-line-btn,
+  .nav .nav-line-btn {
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.82rem !important;
+    flex-shrink: 0 !important;
+  }
+}
+</style>
+
+<script id="bq-ultimate-hamburger-js">
+/* ════════════════════════════════════════════════════════════
+   🛡 終極 hamburger JS(備援)
+   保證所有可能的 hamburger 按鈕都能開關
+   ════════════════════════════════════════════════════════════ */
+(function(){
+  function setup(){
+    // 找所有可能的 hamburger 按鈕
+    var btns = document.querySelectorAll('.hamburger, .nav-hamburger, #hamBtn, [aria-label="選單"], button[aria-label*="menu" i]');
+    // 找所有可能的 menu
+    var menu = document.querySelector('.nav-menu') || document.querySelector('#navMenu') || document.querySelector('.nav ul');
+    if (!menu) return;
+    
+    btns.forEach(function(btn){
+      if (btn.__bqBound) return;  // 避免重複綁定
+      btn.__bqBound = true;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        menu.classList.toggle('open');
+        menu.classList.toggle('is-open');
+        btn.classList.toggle('open');
+        btn.classList.toggle('is-active');
+      });
+    });
+    
+    // 點 menu 外關閉
+    document.addEventListener('click', function(e){
+      if (menu.classList.contains('open') || menu.classList.contains('is-open')) {
+        var insideMenu = menu.contains(e.target);
+        var onBtn = Array.from(btns).some(function(b){ return b.contains(e.target); });
+        if (!insideMenu && !onBtn) {
+          menu.classList.remove('open');
+          menu.classList.remove('is-open');
+          btns.forEach(function(b){
+            b.classList.remove('open');
+            b.classList.remove('is-active');
+          });
+        }
+      }
+    });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setup);
+  } else {
+    setup();
+  }
+})();
+</script>
+
 </body>
 </html>
