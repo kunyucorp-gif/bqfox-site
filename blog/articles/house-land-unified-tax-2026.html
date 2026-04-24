@@ -1905,6 +1905,116 @@ article p{margin:0 0 20px}
     max-width: 100px !important;
   }
 }
+
+/* ════════════════════════════════════════════════════════════
+   Round 4.1:LINE 按鈕遮住公司名修復(2026-04-24)
+   問題:手機 LINE 諮詢按鈕太大 → 截斷「寶璣建設有限公」
+   ════════════════════════════════════════════════════════════ */
+
+/* ─── 中型手機(400-900px)─── */
+@media screen and (max-width: 900px) {
+  /* 公司名稱優先 + 不截斷 */
+  .nav .nav-logo {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    max-width: calc(100% - 160px) !important;  /* 預留 LINE + hamburger 空間 */
+  }
+  
+  .nav-logo-text strong,
+  .nav .nav-logo-text strong {
+    white-space: nowrap !important;
+    overflow: visible !important;   /* 原 hidden 改 visible,不截斷 */
+    text-overflow: clip !important;
+    font-size: 0.92rem !important;
+    font-family: "Noto Serif TC", serif !important;
+  }
+  
+  /* LINE 按鈕縮小 */
+  .nav .nav-line-btn,
+  .nav a.nav-line-btn,
+  a.nav-line-btn {
+    padding: 0.45rem 0.7rem !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.02em !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    gap: 0.2rem !important;
+  }
+  
+  .nav .nav-line-btn svg,
+  a.nav-line-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+/* ─── 小型手機(420px 以下 → iPhone SE / 13 mini)─── */
+@media screen and (max-width: 420px) {
+  /* 公司名字更小,英文副標隱藏(已經在前面做了) */
+  .nav-logo-text strong,
+  .nav .nav-logo-text strong {
+    font-size: 0.88rem !important;
+    letter-spacing: -0.01em !important;
+  }
+  
+  /* LINE 按鈕變超精簡:只顯示「LINE」或只顯示圖示 */
+  .nav .nav-line-btn,
+  a.nav-line-btn {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.72rem !important;
+  }
+  
+  /* 隱藏 LINE 按鈕裡的「諮詢」字,只留 LINE */
+  .nav .nav-line-btn::after,
+  a.nav-line-btn::after {
+    content: "" !important;
+  }
+  
+  /* hamburger 稍微縮小 */
+  button#hbtn,
+  .nav .hamburger {
+    width: 46px !important;
+    height: 46px !important;
+    padding: 8px !important;
+  }
+  
+  button#hbtn span,
+  .nav .hamburger span {
+    width: 24px !important;
+    height: 2.5px !important;
+  }
+  
+  /* logo mark 也縮 */
+  .nav-logo-mark,
+  .nav .nav-logo-mark {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .nav-logo-mark svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* ─── 超小螢幕(360px 以下)─── */
+@media screen and (max-width: 360px) {
+  /* LINE 按鈕只剩 icon */
+  .nav .nav-line-btn,
+  a.nav-line-btn {
+    padding: 0.45rem !important;
+    font-size: 0 !important;  /* 隱藏文字 */
+  }
+  
+  .nav .nav-line-btn svg,
+  a.nav-line-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+  }
+}
+
 </style>
 
 <script id="bq-real-fix-round4-js">
