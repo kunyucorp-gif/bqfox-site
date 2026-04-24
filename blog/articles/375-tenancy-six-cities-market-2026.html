@@ -1235,5 +1235,524 @@ article p{margin:0 0 20px}
 })();
 </script>
 
+
+<style id="bq-real-fix-round4" data-priority="highest">
+/* ════════════════════════════════════════════════════════════
+   🛡🛡🛡 真終極修復 Round 4 (2026-04-24)
+   Kevin 實測:
+   - Apple 按 ☰ 選單不見(menu 沒顯示)
+   - Android 沒看到 ☰ 符號
+   - 全站字體要再放大(不靠縮放)
+   ════════════════════════════════════════════════════════════ */
+
+/* ════════════════════════════════════════════════
+   【1】HAMBURGER #hbtn 強制顯示(Android + iPhone 都要看到)
+   ════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+  /* 鎖死對應 id #hbtn(實際用的 id) */
+  button#hbtn,
+  .nav button#hbtn,
+  .nav .hamburger,
+  .nav button.hamburger,
+  nav button#hbtn,
+  nav .hamburger {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    background: rgba(201, 162, 77, 0.12) !important;
+    border: 2px solid #c9a24d !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10010 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  button#hbtn span,
+  .nav button#hbtn span,
+  .nav .hamburger span,
+  nav .hamburger span {
+    display: block !important;
+    width: 28px !important;
+    height: 3px !important;
+    background: #c9a24d !important;
+    margin: 0 !important;
+    border-radius: 2px !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* 展開時變 X(白色,更明顯) */
+  button#hbtn.open span:nth-child(1),
+  button#hbtn[aria-expanded="true"] span:nth-child(1),
+  .nav .hamburger.open span:nth-child(1),
+  .nav .hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg) !important;
+    background: #f5f2ec !important;
+  }
+  
+  button#hbtn.open span:nth-child(2),
+  button#hbtn[aria-expanded="true"] span:nth-child(2),
+  .nav .hamburger.open span:nth-child(2),
+  .nav .hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+  }
+  
+  button#hbtn.open span:nth-child(3),
+  button#hbtn[aria-expanded="true"] span:nth-child(3),
+  .nav .hamburger.open span:nth-child(3),
+  .nav .hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg) !important;
+    background: #f5f2ec !important;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   【2】nav-menu 展開後強制顯示 + 深背景白字
+   (Apple 按下去選單不見 → 強制 display:flex + visibility:visible)
+   ════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+  /* 未展開狀態 — 完全隱藏 */
+  .nav .nav-menu,
+  nav .nav-menu,
+  ul.nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* 展開狀態 — 強制全螢幕覆蓋顯示 */
+  .nav .nav-menu.open,
+  nav .nav-menu.open,
+  ul.nav-menu.open {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 72px) !important;
+    max-height: calc(100vh - 72px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: #0a0a0a !important;
+    z-index: 9998 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6) !important;
+  }
+  
+  /* 展開狀態下的 li 項目 */
+  .nav .nav-menu.open li,
+  .nav .nav-menu.open .nav-item,
+  nav .nav-menu.open li {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #2a2824 !important;
+    list-style: none !important;
+  }
+  
+  /* 展開狀態下的主連結 — 強制白字深底大字 */
+  .nav .nav-menu.open li > a,
+  .nav .nav-menu.open .nav-item > a,
+  .nav .nav-menu.open .nav-link,
+  nav .nav-menu.open li > a {
+    display: flex !important;
+    visibility: visible !important;
+    width: 100% !important;
+    padding: 1.3rem 1.5rem !important;
+    color: #f5f2ec !important;  /* 強制白色 */
+    background: #0a0a0a !important;  /* 強制深黑 */
+    text-decoration: none !important;
+    font-size: 1.15rem !important;  /* 加大 */
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   【3】下拉選單(營業項目 ▾)強制白字深底
+   .nav-dd 展開後,裡面的 a 連結要看得到!
+   ════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+  /* 下拉容器 */
+  .nav .nav-menu.open .nav-dd,
+  .nav .nav-menu.open div.nav-dd,
+  nav .nav-menu.open .nav-dd {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #141414 !important;
+    border: none !important;
+    border-top: 1px solid rgba(201, 162, 77, 0.35) !important;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.5) !important;
+  }
+  
+  /* 下拉連結 — 關鍵!強制淺金白字 */
+  .nav .nav-menu.open .nav-dd > a,
+  .nav .nav-menu.open .nav-dd a[role="menuitem"],
+  .nav .nav-menu.open .nav-dd a,
+  nav .nav-menu.open .nav-dd > a {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    padding: 1.1rem 2.5rem !important;
+    color: #d4c9b3 !important;  /* 淺金白字 */
+    background: #141414 !important;  /* 深灰底 */
+    text-decoration: none !important;
+    font-size: 1.05rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.02em !important;
+    border: none !important;
+    border-top: 1px solid #2a2824 !important;
+    border-bottom: none !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 第一個子項 — 金色頂線 */
+  .nav .nav-menu.open .nav-dd > a:first-child,
+  nav .nav-menu.open .nav-dd > a:first-child {
+    border-top: 2px solid #c9a24d !important;
+  }
+  
+  /* Hover / Active */
+  .nav .nav-menu.open .nav-dd > a:hover,
+  .nav .nav-menu.open .nav-dd > a:active,
+  .nav .nav-menu.open .nav-dd a:hover,
+  .nav .nav-menu.open .nav-dd a:active {
+    background: #1a1a1a !important;
+    color: #c9a24d !important;  /* 金色 hover */
+    padding-left: 3rem !important;
+  }
+  
+  /* ic-chevron ▾ 強制金色 */
+  .nav .nav-menu.open .ic-chevron,
+  .nav .nav-menu.open svg.ic-chevron {
+    stroke: #c9a24d !important;
+    fill: none !important;
+    opacity: 1 !important;
+    margin-left: 0.5rem !important;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   【4】字體大放大(Kevin 要求,不靠螢幕縮放)
+   加更大:html 18px → 20px,body 19px → 22px
+   ════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 18px !important;
+  }
+  body {
+    font-size: 1.15rem !important;
+    line-height: 1.9 !important;
+  }
+  
+  /* 標題加大 */
+  h1 { font-size: 2.2rem !important; line-height: 1.35 !important; }
+  h2 { font-size: 1.8rem !important; line-height: 1.4 !important; }
+  h3 { font-size: 1.45rem !important; line-height: 1.45 !important; }
+  h4 { font-size: 1.25rem !important; line-height: 1.5 !important; }
+  h5 { font-size: 1.15rem !important; line-height: 1.55 !important; }
+  
+  /* 內文 */
+  p, li, td, th, blockquote, dd, dt {
+    font-size: 1.13rem !important;
+    line-height: 1.9 !important;
+  }
+  
+  /* blog/服務頁的內容區 */
+  .bq-cat-card p,
+  .bq-cat-desc,
+  .bq-cat-articles a {
+    font-size: 1.08rem !important;
+    line-height: 1.75 !important;
+  }
+  
+  .bq-cat-card h2 {
+    font-size: 1.7rem !important;
+  }
+  
+  /* 首頁 stat 區塊 */
+  .bqv4-stat-num {
+    font-size: 3.3rem !important;
+  }
+  
+  .bqv4-stat-label {
+    font-size: 1rem !important;
+  }
+  
+  /* 首頁 service 卡片 */
+  .bqv4-service-card h3 {
+    font-size: 1.55rem !important;
+  }
+  
+  .bqv4-service-card p {
+    font-size: 1.1rem !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 知識專區卡片 */
+  .bqv4-knowledge-card h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .bqv4-knowledge-card p {
+    font-size: 1.08rem !important;
+    line-height: 1.8 !important;
+  }
+  
+  .bqv4-knowledge-card .num {
+    font-size: 3.2rem !important;
+  }
+  
+  /* FAQ */
+  .bqv4-faq-q, .faq-q {
+    font-size: 1.22rem !important;
+  }
+  
+  .bqv4-faq-a, .faq-a {
+    font-size: 1.08rem !important;
+    line-height: 1.9 !important;
+  }
+  
+  /* 按鈕 */
+  .bqv4-btn, .btn, button.btn, a.btn {
+    font-size: 1.08rem !important;
+    padding: 1.05rem 2rem !important;
+  }
+  
+  /* Footer 不會太小 */
+  footer, footer p, footer span, footer div, footer a {
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+  }
+  
+  /* 表單 */
+  input, select, textarea, label {
+    font-size: 1.08rem !important;
+  }
+  
+  /* Pull quote */
+  .bqv4-pullquote, blockquote {
+    font-size: 1.3rem !important;
+    line-height: 1.85 !important;
+  }
+}
+
+/* 更窄的手機再微調(iPhone SE / 小螢幕) */
+@media screen and (max-width: 420px) {
+  html { font-size: 17.5px !important; }
+  body { font-size: 1.12rem !important; }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.65rem !important; }
+  h3 { font-size: 1.35rem !important; }
+  p, li { font-size: 1.1rem !important; line-height: 1.88 !important; }
+}
+
+/* ════════════════════════════════════════════════
+   【5】nav logo + LINE 手機不搶空間
+   ════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+  .nav {
+    padding: 0.6rem 0.9rem !important;
+    gap: 0.5rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .nav .nav-logo {
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .nav-logo-mark, .nav .nav-logo-mark {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .nav-logo-mark svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .nav-logo-text strong {
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  
+  .nav-logo-text small,
+  .nav .nav-logo-text small {
+    display: none !important;
+  }
+  
+  /* 電話手機隱藏 */
+  .nav-tel,
+  .nav .nav-tel {
+    display: none !important;
+  }
+  
+  /* LINE 按鈕 */
+  .nav-line-btn,
+  .nav .nav-line-btn {
+    flex-shrink: 0 !important;
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* 更窄手機隱藏 LINE 文字,只留圖示 */
+  .nav-logo-text strong {
+    font-size: 0.9rem !important;
+    max-width: 100px !important;
+  }
+}
+</style>
+
+<script id="bq-real-fix-round4-js">
+/* ════════════════════════════════════════════════════════════
+   🛡 真終極 Hamburger JS Round 4
+   綁 #hbtn(實際 id)+ 所有變體
+   ════════════════════════════════════════════════════════════ */
+(function(){
+  function initRealFix(){
+    // 1. 找所有 hamburger(包含實際用的 #hbtn)
+    var btns = [];
+    var hbtn = document.getElementById('hbtn');
+    var hamBtn = document.getElementById('hamBtn');
+    if (hbtn) btns.push(hbtn);
+    if (hamBtn) btns.push(hamBtn);
+    
+    // 再找所有 .hamburger class
+    document.querySelectorAll('.hamburger, .nav-hamburger').forEach(function(b){
+      if (btns.indexOf(b) === -1) btns.push(b);
+    });
+    
+    if (btns.length === 0) {
+      console.log('[BQ R4] no hamburger button found');
+      return;
+    }
+    
+    // 2. 找 menu
+    var menu = document.querySelector('.nav .nav-menu') 
+            || document.querySelector('nav .nav-menu')
+            || document.querySelector('.nav-menu')
+            || document.querySelector('#navMenu');
+    
+    if (!menu) {
+      console.log('[BQ R4] no nav-menu found');
+      return;
+    }
+    
+    // 3. 綁定所有按鈕(不重複)
+    btns.forEach(function(btn){
+      if (btn.__bqR4Bound) return;
+      btn.__bqR4Bound = true;
+      
+      // 清掉舊的 onclick(避免衝突)
+      btn.onclick = null;
+      
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        
+        var isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          btns.forEach(function(b){
+            b.classList.remove('open');
+            b.setAttribute('aria-expanded', 'false');
+          });
+        } else {
+          menu.classList.add('open');
+          btns.forEach(function(b){
+            b.classList.add('open');
+            b.setAttribute('aria-expanded', 'true');
+          });
+        }
+        console.log('[BQ R4] hamburger clicked, now open=' + !isOpen);
+      }, true);  // useCapture=true 確保優先觸發
+    });
+    
+    // 4. 點選單外關閉(避免綁在每個連結)
+    document.addEventListener('click', function(e){
+      if (!menu.classList.contains('open')) return;
+      
+      var clickedBtn = btns.some(function(b){ return b.contains(e.target); });
+      var clickedMenu = menu.contains(e.target);
+      
+      if (!clickedBtn && !clickedMenu) {
+        menu.classList.remove('open');
+        btns.forEach(function(b){
+          b.classList.remove('open');
+          b.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+    
+    console.log('[BQ R4] hamburger bound: ' + btns.length + ' button(s)');
+  }
+  
+  // 延遲執行,確保所有 DOM 都載入完
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRealFix);
+  } else {
+    initRealFix();
+  }
+  
+  // 再保險:window load 再跑一次
+  window.addEventListener('load', initRealFix);
+})();
+</script>
+
 </body>
 </html>
