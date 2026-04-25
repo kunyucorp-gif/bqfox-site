@@ -1643,27 +1643,6 @@ main#bqv4-home .bqv4-eyebrow::before {
   </div>
 </footer>
 
-<script>
-(function(){
-  var nav = document.getElementById('nav');
-  if (nav) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 20) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-  }
-  var hbtn = document.getElementById('hbtn');
-  var navMenu = document.querySelector('.nav-menu');
-  if (hbtn && navMenu) {
-    hbtn.addEventListener('click', function() {
-      navMenu.classList.toggle('open');
-      hbtn.classList.toggle('open');
-    });
-  }
-})();
-</script>
-
-<!-- 載入主要 JS(處理手機 nav、字色、展開動畫) -->
 <script src="assets/main.js"></script>
 
 </body>
