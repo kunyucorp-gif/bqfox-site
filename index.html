@@ -1915,6 +1915,28 @@ main#bqv4-home .bqv4-eyebrow::before {
     hbtn.addEventListener('click', function() {
       navMenu.classList.toggle('open');
       hbtn.classList.toggle('open');
+      // 🆕 2026-04-25 v3:展開時用 setProperty + important 強制覆蓋字色
+      if (navMenu.classList.contains('open')) {
+        // 主選單字色強制設為淺色
+        var mainLinks = navMenu.querySelectorAll('.nav-item > a, .nav-link');
+        for (var i = 0; i < mainLinks.length; i++) {
+          mainLinks[i].style.setProperty('color', '#f5f2ec', 'important');
+          mainLinks[i].style.setProperty('background', 'transparent', 'important');
+        }
+        // 下拉選單(營業項目/相關連結 子項)字色設為米色
+        var ddLinks = navMenu.querySelectorAll('.nav-dd a');
+        for (var j = 0; j < ddLinks.length; j++) {
+          ddLinks[j].style.setProperty('color', '#d4c9b3', 'important');
+          ddLinks[j].style.setProperty('background', '#141414', 'important');
+        }
+      } else {
+        // 收起時清空 inline style(讓桌機 hover 行為正常)
+        var allLinks = navMenu.querySelectorAll('a');
+        for (var k = 0; k < allLinks.length; k++) {
+          allLinks[k].style.removeProperty('color');
+          allLinks[k].style.removeProperty('background');
+        }
+      }
     });
   }
 })();
