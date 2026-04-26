@@ -1132,6 +1132,17 @@ main#bqv4-home .bqv4-eyebrow::before {
   .bqv4-contact-form { padding: 2rem 1.3rem; }
 }
 
+/* ════════════════════════════════════════════════════════════
+   📱 手機版專屬調整(2026-04-25)
+   1. Hamburger 拿掉(避免誤點,因功能尚未實作完成)
+   2. 文字放大 25%(把 html font-size 從 16px 提升到 20px)
+   只手機 ≤768px 生效,桌機完全不變
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hamburger { display: none !important; }
+  html { font-size: 20px !important; }
+}
+
 </style>
 </head>
 <body>
